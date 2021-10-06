@@ -22,6 +22,11 @@ class Robot {
   };
 
   /**
+   * @brief Destructor for class Robot
+   */
+  ~Robot();
+
+  /**
    * @brief Set robot attributes
    * @param robot_wheelbase double
    * @param left_steerangle double

@@ -31,6 +31,11 @@ class PID {
     _prev_error = 0;
     _integral = 0;
   };
+  
+  /**
+   * @brief Destructor for class PID
+   */
+  ~PID();
 
   /**
    * @brief Calculate the output based on the current value and the desired value

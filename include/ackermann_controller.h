@@ -13,7 +13,7 @@
 class AckermannController {
  public:
   /**
-   * @brief Constructor for class Robot
+   * @brief Constructor for class AckermannController
    * @param max_steerangle double
    * @param max_velocity double
    * @param desired_velocity double
@@ -22,6 +22,11 @@ class AckermannController {
    */
   AckermannController(double max_steerangle, double max_velocity, double desired_velocity, double desired_heading, double current_heading){
   };
+
+  /**
+   * @brief Destructor for class AckermannController
+   */
+  ~AckermannController();
 
   /**
    * @brief Set desired robot velocity
