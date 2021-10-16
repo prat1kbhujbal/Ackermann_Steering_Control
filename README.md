@@ -1,3 +1,3 @@
 # Ackermann_Steering_Control
-## [**Project Proposal file**](/ACKERMANN_STEERING_CONTROL_PROPOSAL.pdf)
-## [**Project Proposal video link**](https://drive.google.com/file/d/15iy-2SuSmG_s6QIYdW_H0NLLzVSPetug/view?usp=sharing) 
+[![Build Status](https://app.travis-ci.com/Prat33k-dev/Ackermann_Steering_Control.svg?branch=dev)](https://app.travis-ci.com/Prat33k-dev/Ackermann_Steering_Control)
+[![Coverage Status](https://coveralls.io/repos/github/Prat33k-dev/Ackermann_Steering_Control/badge.svg?branch=dev)](https://coveralls.io/github/Prat33k-dev/Ackermann_Steering_Control?branch=dev)
