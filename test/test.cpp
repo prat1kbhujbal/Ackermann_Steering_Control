@@ -84,8 +84,8 @@ TEST(forwardKinematicsTest, forwardKinematicsMemeberTest) {
     Robot robot1(4, 2, 0.3, 0.1, 0.1, 0, 0, 1, 0.785);
     fk.setDTheta(0.1);
     EXPECT_EQ(0,fk.getR1());
-    EXPECT_NEAR(fk.calculateNewHeading(0.1), 0.1, 0.1);
-    EXPECT_NEAR(fk.calculateNewSpeed(5), 5, 0.1);
+    EXPECT_NEAR(fk.calculateNewHeading(0.1), 0.785, 0.1);
+    EXPECT_NEAR(fk.calculateNewSpeed(5), 1, 0.1);
     EXPECT_TRUE(fk.goalReached(0.1, 10));
 }
 
