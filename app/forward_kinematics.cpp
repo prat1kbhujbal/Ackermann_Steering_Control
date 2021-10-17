@@ -18,7 +18,6 @@
 #include<sensor.hpp>
 #include<robot.hpp>
 
-
 double ForwardKinematics::getR1() {
 }
 
