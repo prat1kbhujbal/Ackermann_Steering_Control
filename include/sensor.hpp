@@ -18,7 +18,10 @@ class Sensor {
     /**
      * @brief Constructor for class Sensor to initialize robot current heading and speed to zero.
      */
-    Sensor() {}
+    Sensor() {
+      _current_heading = 0;
+      _current_speed = 0;
+    }
 
     /**
      * @brief Destructor for class Sensor
