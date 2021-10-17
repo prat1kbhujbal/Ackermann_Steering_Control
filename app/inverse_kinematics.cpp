@@ -52,9 +52,8 @@ void InverseKinematics::calculateWheelAngles(double new_heading) {
       robot2.setRightWheelAng(right_angle);
     }
   } else {
-    double x = 0;
-    robot2.setLeftWheelAng(x);
-    robot2.setRightWheelAng(x);
+    robot2.setLeftWheelAng(0);
+    robot2.setRightWheelAng(0);
   }
 
   std::cout << "Left Wheel Angle= " << robot2.getLeftWheelAng()

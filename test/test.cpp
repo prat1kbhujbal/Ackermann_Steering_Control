@@ -74,6 +74,22 @@ TEST(sensorTest, sensorMemberTest){
     EXPECT_EQ(sensor.getCurrentSpeed(), 5);
 }
 
+TEST(InverseKinematicsTest, inverseKinematicsMembersTest) {
+    Robot robot2(4, 2, 0.3, 0.01, 0.01, 0, 0, 1, 0.785);
+    ForwardKinematics fk2;
+    InverseKinematics ik1;
+    ik1.calculateWheelAngles(0.1);
+    ik1.calculateWheelSpeeds(10);
+}
+
+TEST(InverseKinematicsTest1, inverseKinematicsMembersTest) {
+    Robot robot3(4, 2, 0.3, 0.01, 0.01, 0, 0, 1, 0.785);
+    ForwardKinematics fk3;
+    InverseKinematics ik2;
+    ik2.calculateWheelAngles(-0.1);
+    ik2.calculateWheelSpeeds(10);   
+}
+
 TEST(forwardKinematicsTest, forwardKinematicsMemeberTest) {
     ForwardKinematics fk;
     PID pid_steer(1, 1, 1, 0.1, -0.785, 0.785);
@@ -89,12 +105,18 @@ TEST(forwardKinematicsTest, forwardKinematicsMemeberTest) {
     EXPECT_TRUE(fk.goalReached(0.1, 10));
 }
 
-TEST(InverseKinematicsTest, inverseKinematicsMembersTest) {
-    Robot robot2(4, 2, 0.3, 0.01, 0.01, 0, 0, 1, 0.785);
-    ForwardKinematics fk2;
-    InverseKinematics ik1;
-    ik1.calculateWheelAngles(0.1);
-    ik1.calculateWheelSpeeds(10);
-    
+TEST(forwardKinematicsTest1, forwardKinematicsMemeberTest) {
+    ForwardKinematics fk1;
+    PID pid_steer1(1, 1, 1, 0.1, -0.785, 0.785);
+    PID pid_speed1(1, 1, 1, 0.1, 0, 1);
+    Sensor sensor2;
+    sensor2.setCurrerntHeading(0.1);
+    sensor2.setCurrerntSpeed(10);
+    Robot robot2(4, 2, 0.3, 0.1, 0.1, 0, 0, 1, 0.785);
+    fk1.setDTheta(0.1);
+    EXPECT_EQ(0,fk1.getR1());
+    EXPECT_NEAR(fk1.calculateNewHeading(-0.1), -0.785, 0.1);
+    EXPECT_NEAR(fk1.calculateNewSpeed(5), 1, 0.1);
 }
+
 
