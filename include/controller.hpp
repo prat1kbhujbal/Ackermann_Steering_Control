@@ -18,7 +18,10 @@ class Controller {
   /** @brief  Constrctor of Class Controller to initialize goal values.
    */
 
-  Controller() {}
+  Controller() {
+  _goal_heading = 0;
+  _goal_speed = 0;
+  }
 
   /**
    * @brief Destructor of class Controller.
@@ -43,7 +46,7 @@ class Controller {
    * @param void
    * @return void
    */
-  void setGoal();
+  void setGoal(double goal_heading,  double goal_speed);
 
  private:
   /**

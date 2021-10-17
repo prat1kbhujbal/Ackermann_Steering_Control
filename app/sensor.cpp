@@ -23,7 +23,9 @@
  */
 
 double Sensor::getCurrerntHeading() {
+  return _current_heading;
 }
 
 double Sensor::getCurrentSpeed() {
+  return _current_speed;
 }

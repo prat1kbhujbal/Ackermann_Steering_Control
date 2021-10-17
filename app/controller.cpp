@@ -14,10 +14,14 @@
 #include <controller.hpp>
 
 double Controller::getGoalHeading() {
+  return _goal_heading;
 }
 
 double Controller::getGoalSpeed() {
+  return _goal_speed;
 }
 
-void Controller::setGoal() {
+void Controller::setGoal(double goal_heading,  double goal_speed) {
+  _goal_heading = goal_heading;
+  _goal_speed = goal_speed;
 }
