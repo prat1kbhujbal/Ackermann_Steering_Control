@@ -37,4 +37,23 @@ double PID::getDt() {
 }
 
 double PID::compute(double current_value, double desired_value) {
+  if (getDt() <= 0.0)
+    throw std::domain_error("The delta t must be greater than zero");
+  else if (getKp() <= 0 || getKi() <= 0 || getKd() <= 0)
+    throw std::domain_error("Kp, Kd and Ki must be greater than zero");
+
+  double error = desired_value - current_value;
+  double derivative = (error - _prev_error) / getDt();
+  _integral += error * getDt();
+  double output = getKp() * error + getKi() * _integral + getKd() * derivative;
+
+  _prev_error = error;
+
+  if (output <= _min)
+    output = _min;
+  else if (output >= _max)
+    output = _max;
+
+  std::cout << "output = " << current_value +output << std::endl;
+  return current_value + output;
 }

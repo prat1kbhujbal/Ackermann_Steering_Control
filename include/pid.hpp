@@ -25,6 +25,14 @@ class PID {
    * @param max double - Maximum limit of output value 
    */
   PID(double Kp, double Ki, double Kd, double dt, double min, double max) {
+    _Kp = Kp;
+    _Ki = Ki;
+    _Kd = Kd;
+    _dt = dt;
+    _min = min;
+    _max = max;
+    _prev_error = 0;
+    _integral = 0;
   }
 
   /**
