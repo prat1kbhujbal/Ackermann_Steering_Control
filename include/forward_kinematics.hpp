@@ -23,6 +23,11 @@ class ForwardKinematics {
    * @return void
    */
   ForwardKinematics() {
+    _new_heading = 0;
+    _new_speed = 0;
+    _d_theta = 0;
+    _R = 0;
+    _R1 = 0;
   }
 
   /**
