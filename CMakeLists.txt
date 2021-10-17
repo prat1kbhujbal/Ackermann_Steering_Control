@@ -12,6 +12,12 @@ if (COVERAGE)
     set(LCOV_REMOVE_EXTRA "'vendor/*'")
     setup_target_for_coverage(code_coverage test/cpp-test coverage)
     set(COVERAGE_SRCS app/pid.cpp include/pid.hpp)
+    set(COVERAGE_SRCS app/main.cpp app/controller.cpp include/controller.hpp)
+    set(COVERAGE_SRCS app/robot.cpp include/robot.hpp)
+    set(COVERAGE_SRCS app/sensor.cpp include/sensor.hpp)
+    set(COVERAGE_SRCS app/forward_kinematics.cpp include/forward_kinematics.hpp)
+    set(COVERAGE_SRCS app/inverse_kinematics.cpp include/inverse_kinematics.hpp)
+
 
     SET(CMAKE_CXX_FLAGS "-g -O0 -fprofile-arcs -ftest-coverage")
     SET(CMAKE_C_FLAGS "-g -O0 -fprofile-arcs -ftest-coverage")
@@ -25,4 +31,5 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 set(CMAKE_CXX_STANDARD 14)
 
 add_subdirectory(app)
+add_subdirectory(test)
 add_subdirectory(vendor/googletest/googletest)
