@@ -10,20 +10,44 @@
  */
 
 #pragma once
-
+/**
+ * @brief Class to hold goal attributes and members.
+ */
 class Controller {
  public:
-   Controller() {}
+  /** @brief  Constrctor of Class Controller to initialize goal values.
+   */
 
+  Controller() {}
+
+  /**
+   * @brief Destructor of class Controller.
+   */
   ~Controller() {}
 
+  /**
+   * @brief Get goal heading value
+   * @param void
+   * @return double - Robot's goal heading
+   */
   double getGoalHeading();
 
+  /**
+   * @brief Get goal speed value.
+   * @return double - Robot's goal speed
+   */
   double getGoalSpeed();
 
+  /**
+   * @brief Get set goal heading and speed values.
+   * @param void
+   * @return void
+   */
   void setGoal();
 
  private:
-
+  /**
+   * Class local variables.
+   */
   double _goal_heading, _goal_speed;
 };
