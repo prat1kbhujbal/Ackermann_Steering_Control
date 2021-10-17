@@ -13,10 +13,8 @@
 
 double Robot::getWheelBase() {
 }
-
 double Robot::getTrackWidth() {
 }
-
 double Robot::getWheelRadius() {
 }
 double Robot::getLeftWheelVel() {
