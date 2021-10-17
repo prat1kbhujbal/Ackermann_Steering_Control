@@ -5,7 +5,7 @@
 #include "../include/robot.hpp"
 #include "../include/sensor.hpp"
 #include "../include/forward_kinematics.hpp"
-
+#include "../include/inverse_kinematics.hpp"
 TEST(computePidTest, gain_update_check) {
     PID pid(0.8, 0.5, 0.3, 1.0, -20, 20);
     double something = pid.compute(0, 5);
@@ -88,3 +88,13 @@ TEST(forwardKinematicsTest, forwardKinematicsMemeberTest) {
     EXPECT_NEAR(fk.calculateNewSpeed(5), 5, 0.1);
     EXPECT_TRUE(fk.goalReached(0.1, 10));
 }
+
+TEST(InverseKinematicsTest, inverseKinematicsMembersTest) {
+    Robot robot2(4, 2, 0.3, 0.01, 0.01, 0, 0, 1, 0.785);
+    ForwardKinematics fk2;
+    InverseKinematics ik1;
+    ik1.calculateWheelAngles(0.1);
+    ik1.calculateWheelSpeeds(10);
+    
+}
+
