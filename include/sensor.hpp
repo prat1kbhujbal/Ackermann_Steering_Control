@@ -10,21 +10,51 @@
  */
 
 #pragma once
-
+/**
+ * @brief Class to hold current state of robot.
+ */
 class Sensor {
  public:
+    /**
+     * @brief Constructor for class Sensor to initialize robot current heading and speed to zero.
+     */
     Sensor() {}
 
+    /**
+     * @brief Destructor for class Sensor
+     */
     ~Sensor() {}
 
+    /**
+     * @brief Get current heading of robot.
+     * @param void
+     * @return double - Robot's current heading
+     */
     double getCurrerntHeading();
 
+    /**
+     * @brief Get current speed of robot.
+     * @return double - Robot's current speed
+     */
     double getCurrentSpeed();
 
+    /**
+     * @brief Set current heading of robot.
+     * @param double - Current heading of robot.
+     * @return void
+     */
     void setCurrerntHeading(double);
 
+    /**
+     * @brief Set current speed of robot.
+     * @param double - Current speed of robot.
+     * @return void
+     */
     void setCurrerntSpeed(double);
 
  private:
+    /**
+     * Class local variables.
+     */
     double _current_heading, _current_speed;
 };
