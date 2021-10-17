@@ -21,13 +21,15 @@ are made:
 ## Agile Iterative Process (AIP) 
 The general idea is to split the development of the software into sequences of repeated cycles (iterations).
 
-[Agile Iterative Process](https://docs.google.com/spreadsheets/d/1n_kbtt7QxT_ALCAvM8brNtceum1OX8zb4m0UsBqBF-c/edit#gid=0)
+### [Agile Iterative Process](https://docs.google.com/spreadsheets/d/1n_kbtt7QxT_ALCAvM8brNtceum1OX8zb4m0UsBqBF-c/edit#gid=0)
 
 ### [Sprint planning docs](https://docs.google.com/document/d/19WqTGq6393yfdi9zWVSW7mBga2KUV8RA2Y6YoS7wM1U/edit?usp=sharing)
 
+### [Phase_1 Video Submission](https://drive.google.com/file/d/12jXQU_aEKI4CIOKC4BrwYpx9jED0UkKq/view?usp=sharing)
 
+### [Phase_1 report file](/reports/Ackermann_Steering_Control_Phase_1.pdf)
 
 ## Authors
-- Pratik Bhujbal
-- Maitreya Kulkarni
-- Maaruf Vazifdar
+- Pratik Bhujbal  UID: 117555295
+- Maitreya Kulkarni UID: 117506075
+- Maaruf Vazifdar UID: 117509717
