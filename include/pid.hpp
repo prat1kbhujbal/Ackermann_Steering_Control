@@ -1,15 +1,18 @@
 /** 
- * @file ackermann_controller.h
+ * @file pid.hpp
+ * @author Pratik Bhujbal
  * @author Maaruf Vazifdar
  * @author Maitreya Kulkarni
- * @author Pratik Bhujnbal
- * @brief A class to hold ackermann_controller attributes and its members.
+ * @brief A class to compute PID values for a system.
  * @version 0.1
  * @date 10/05/2021
  * Copyright [2021] ENPM808X group - MT-15
  */
 
 #pragma once
+/**
+ * @brief Class to hold PID Controller attributes and members.
+ */
 class PID {
  public:
   /**
@@ -21,21 +24,13 @@ class PID {
    * @param min double - Minimum limit of output value
    * @param max double - Maximum limit of output value 
    */
-  PID(double Kp, double Ki, double Kd, double dt, double min, double max){
-    _Kp = Kp;
-    _Ki = Ki;
-    _Kd = Kd;
-    _dt = dt;
-    _min = min;
-    _max = max;
-    _prev_error = 0;
-    _integral = 0;
-  };
-  
+  PID(double Kp, double Ki, double Kd, double dt, double min, double max) {
+  }
+
   /**
    * @brief Destructor for class PID
    */
-  ~PID();
+  ~PID() {}
 
   /**
    * @brief Calculate the output based on the current value and the desired value
@@ -43,31 +38,31 @@ class PID {
    * @param desired_value double - desired value of system
    * @return void
    */
-  double calculatePID(double current_value, double desired_value);
+  double compute(double current_value, double desired_value);
 
   /**
    * @brief Get the Kp value
-   * @return double 
+   * @return double - Value of Kp
    */
   double getKp();
 
   /**
    * @brief Get the Ki value
-   * @return double 
+   * @return double - Value of Ki
    */
   double getKi();
 
   /**
    * @brief Get the Kd value
-   * @return double 
+   * @return double - Value of Kd
    */
   double getKd();
 
   /**
    * @brief Get the dt
-   * @return double 
+   * @return double - Sampling time
    */
-  double getdt();
+  double getDt();
 
  private:
   /**
