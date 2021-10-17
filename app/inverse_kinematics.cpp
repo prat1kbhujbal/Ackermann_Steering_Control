@@ -19,7 +19,6 @@
 #include<sensor.hpp>
 #include<robot.hpp>
 
-
 void InverseKinematics::calculateWheelAngles(double new_heading) {
 }
 

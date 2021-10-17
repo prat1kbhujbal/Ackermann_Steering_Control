@@ -11,13 +11,34 @@
  */
 
 #pragma once
+/**
+ * @brief Class to apply inverse kinematics.
+ */
 class InverseKinematics {
  public:
+  /**
+   * @brief Constructor for class InverseKinematics
+   */
   InverseKinematics() {}
-/
+
+  /**
+   * @brief Destructor for class InverseKinematics
+   */
   ~InverseKinematics() {}
 
+  /**
+   * @brief Calculate the left and right wheel angles based on heading output 
+   *        of fk.
+   * @param double - heading output from fk
+   * @return void
+   */
   void calculateWheelAngles(double);
 
+  /**
+   * @brief Calculate the left and right wheel speeds based on heading output 
+   *        of fk.
+   * @param double - speed output from fk
+   * @return void
+   */
   void calculateWheelSpeeds(double);
 };
