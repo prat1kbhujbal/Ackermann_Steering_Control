@@ -17,9 +17,10 @@
 #include<controller.hpp>
 #include<sensor.hpp>
 #include<robot.hpp>
+#include <convergence.hpp>
 
-PID pid_steer(1, 1, 1, 0.1, -0.785, 0.785);
-PID pid_speed(1, 1, 1, 0.1, 0, 1);
+PID pid_steer(1, 1, 1, 0.2, -0.785, 0.785);
+PID pid_speed(0.1, 0.1, 0.2, 0.2, 0, 10);
 Sensor sensor1;
 Robot robot1(4, 2, 0.3, 0.1, 0.1, 0, 0, 1, 0.785);
 
@@ -44,7 +45,7 @@ double ForwardKinematics::calculateNewHeading(double goal_heading) {
   _R1 = sqrt(pow(_R, 2) - pow(robot1.getComOffset(), 2));
 
   _d_theta = (robot1.getWheelRadius() * robot1.getLeftWheelVel()
-      * pid_steer. getDt()) / (_R1 + (robot1.getTrackWidth() / 2));
+      * 1) / (_R1 + (robot1.getTrackWidth() / 2));
       setDTheta(_d_theta);
   } else if (_new_heading < 0.01) {   // Right Turn
     _R = sqrt(pow(robot1.getComOffset(), 2) + (pow(robot1.getWheelBase(), 2)
@@ -53,12 +54,13 @@ double ForwardKinematics::calculateNewHeading(double goal_heading) {
   _R1 = sqrt(pow(_R, 2) - pow(robot1.getComOffset(), 2));
 
   _d_theta = -(robot1.getWheelRadius() * robot1.getLeftWheelVel()
-             * pid_steer.getDt()) / (_R1 + (robot1.getTrackWidth() / 2));
+             * 1) / (_R1 + (robot1.getTrackWidth() / 2));
   } else {
     _new_heading = 0;
   }
 
   sensor1.setCurrerntHeading(sensor1.getCurrerntHeading() + _d_theta);
+  heading_vector.push_back(sensor1.getCurrerntHeading());
 
   std::cout << "cur heading= " << sensor1.getCurrerntHeading() << std::endl;
   std::cout << "d theta= " << _d_theta << std::endl;
@@ -68,17 +70,19 @@ double ForwardKinematics::calculateNewHeading(double goal_heading) {
 
 double ForwardKinematics::calculateNewSpeed(double goal_speed) {
   _new_speed = pid_speed.compute(sensor1.getCurrentSpeed(), goal_speed);
-  if (_new_speed > goal_speed)
-    _new_speed = goal_speed;
+  if (_new_speed > 20)
+    _new_speed = 20;
   sensor1.setCurrerntSpeed(_new_speed);
+  speed_vector.push_back(sensor1.getCurrentSpeed());
 
   return _new_speed;
 }
 
 bool ForwardKinematics::goalReached(double goal_heading, double goal_speed) {
-  if (sensor1.getCurrerntHeading() <= goal_heading &&
-      sensor1.getCurrerntHeading() <= (goal_heading + 0.05)
+  if (sensor1.getCurrerntHeading() <= goal_heading-0.001 &&
+      sensor1.getCurrerntHeading() <= (goal_heading + 0.001)
       && sensor1.getCurrentSpeed() <= goal_speed &&
-      sensor1.getCurrentSpeed() <= (goal_speed + 0.05))
-    return true;
+      sensor1.getCurrentSpeed() <= (goal_speed + 0.05)) 
+        return true;
+
 }

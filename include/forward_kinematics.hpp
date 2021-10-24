@@ -9,13 +9,15 @@
  * @date 10/15/2021
  * Copyright [2021] ENPM808X group - MT-15
  */
-
+#include<vector>
 #pragma once
 /**
  * @brief Class to apply forward kinematics.
  */
 class ForwardKinematics {
  public:
+  std::vector <double> heading_vector;
+  std::vector <double> speed_vector;
   /**
    * @brief Consructor for class ForwardKinematics to initialize values 
    *        local variables to 0.

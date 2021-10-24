@@ -29,7 +29,7 @@ void InverseKinematics::calculateWheelAngles(double new_heading) {
     double right_angle = atan(robot2.getWheelBase() / (fk.getR1() -
     robot2.getTrackWidth() / 2));
 
-    if (left_angle < -robot2.getMaxSteerAngle() && right_angle < -
+    if (left_angle > -robot2.getMaxSteerAngle() && right_angle > -
     robot2.getMaxSteerAngle()) {
       robot2.setLeftWheelAng(-robot2.getMaxSteerAngle());
       robot2.setRightWheelAng(-robot2.getMaxSteerAngle());
@@ -43,8 +43,8 @@ void InverseKinematics::calculateWheelAngles(double new_heading) {
     double right_angle = -atan(robot2.getWheelBase() / (fk.getR1() -
     robot2.getTrackWidth() / 2));
 
-    if (left_angle > robot2.getMaxSteerAngle() && right_angle
-    > robot2.getMaxSteerAngle()) {
+    if (left_angle < robot2.getMaxSteerAngle() && right_angle
+    < robot2.getMaxSteerAngle()) {
       robot2.setLeftWheelAng(robot2.getMaxSteerAngle());
       robot2.setRightWheelAng(robot2.getMaxSteerAngle());
     } else {
