@@ -91,7 +91,7 @@ The purpose of sprint planning is to define what can be delivered in the sprint 
 
 ### [Phase_2 Video Submission](https://drive.google.com/file/d/12jXQU_aEKI4CIOKC4BrwYpx9jED0UkKq/view?usp=sharing)
 
-### [Final Report file](/reports/Ackermann_Steering_Control_Phase_2.pdf)
+### [Final Report file](reports/Ackermann_Steering_Control_Final_Report.pdf)
 
 ## Build And Execute
 After Execution graphs will be saved under build folder.
@@ -114,7 +114,7 @@ sh run_cppcheck.sh
 ```
 For cpplint
 ```
-sh run_cpplint.sh
+sh run_cpplint.sh 
 ```
 
 ## Building for code coverage
