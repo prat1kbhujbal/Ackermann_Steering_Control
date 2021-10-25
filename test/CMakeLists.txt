@@ -11,8 +11,8 @@ add_executable(
     ../app/robot.cpp
     ../app/sensor.cpp
     ../app/convergence.cpp
-    ../include/pbPlots/pbPlots.cpp
-    ../include/pbPlots/supportLib.cpp
+    ../app/pbPlots/pbPlots.cpp
+    ../app/pbPlots/supportLib.cpp
 )
 
 target_include_directories(cpp-test PUBLIC ../vendor/googletest/googletest/include 
