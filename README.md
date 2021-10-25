@@ -1,6 +1,6 @@
 # Ackermann_Steering_Control
 [![Build Status](https://app.travis-ci.com/Prat33k-dev/Ackermann_Steering_Control.svg?branch=dev)](https://app.travis-ci.com/Prat33k-dev/Ackermann_Steering_Control)
-[![Coverage Status](https://coveralls.io/repos/github/Prat33k-dev/Ackermann_Steering_Control/badge.svg?branch=dev)](https://coveralls.io/github/Prat33k-dev/Ackermann_Steering_Control?branch=dev)
+[![Coverage Status](https://coveralls.io/repos/github/Prat33k-dev/Ackermann_Steering_Control/badge.svg?branch=phase2_dev)](https://coveralls.io/github/Prat33k-dev/Ackermann_Steering_Control?branch=phase2_dev)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 -----------------------
 
@@ -15,7 +15,7 @@ are made:
 - Robot’s desired heading and velocity are given by the user as input.
 - Maximum steering angle is 45 degrees.
 - Friction and wheel slippage are considered negligible.
---------------------
+
 ## License
 MIT License
 ```
@@ -27,7 +27,7 @@ The above copyright notice and this permission notice shall be included in all c
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 ```
-------------------------------
+
 ## Project Technologies:
 - Ubuntu 18.04
 - Build System: cmake
@@ -35,17 +35,17 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 - Software Tools: VS Code
 - Build Check: Travis
 - Code Coverage: Coveralls
----------------------------------
+
 ## External Library: 
 - [pbPlots](https://github.com/InductiveComputerScience/pbPlots) (Covered under MIT License) :  A plotting library used to show convergence to desired goals on graphs.
----------------------------------
+
 ## Deliverables
 - Project: A robust Ackermann Steering Control, outputs are wheel angles and velocities.
 - Graphical Representation of convergence of heading and speed to set points.
 - Overview of proposed work that includes timelines risks and mitigations.
 - UML Diagrams.
 - Additon of Coveralls and travis for code coverage
--------------------------------
+
 ## Working
 As the vehicle travels along a curved path, all four tyres follow unique trajectories around a shared turn centre, as defined by the blue arcs shown below.
 ----------------------------------
@@ -59,41 +59,40 @@ For a given turn radius R, wheelbase L, and track width T, the required front st
 <img  height="130" width="380" src="images/Angel_formula.jpg">
 </p>
 
--------------------
+
 ## Risk and Mitigations
-- Robot can't go in backward direction. For this case can implement more cases instead of just go around by making a full turn in forward direction
-- The desired heading & speed sometimes overshoots and maintain steady state error. For this can be resolved by tuning PID gains. 
--  User can't give input heading in negative instead have to give positive value from 0-3.14 (in radians).
--------------------
+- Robot can't go in backward direction. For this case can implement more cases instead of just go around by making a full turn in forward direction.
+- User can't give input heading in negative instead have to give positive value from 0-3.14 (in radians).
+
 ## Results
 For a specific set of inputs, the desired speed and the desired heading angle is acheived within expected range of +-5%. Example shown below with convergence for input as 0.1 and 5 for desired heading and speed and output with each forward wheel velocities and angles.
 
-Outout on graphs for same inputs showing convergence for speed and heading:
+Output on graphs for same inputs showing convergence for speed and heading:
 <p align="left">
   <img  height="300"  width="400" src="images/speed.png">
   <img  height="300"   width="400" src="images/heading.png">
 </p> 
 
--------------------------------
+
 ## UML Diagrams:
 - ### [Activity Diagram](UML/revised/ActivityDiagram_v2.pdf)
 - ### [Class Diagram](UML/revised/ClassDiagram_v2.pdf)
 ## [Quad Chart](Quadchart.pdf)
------------------------------------
+
 ## Agile Iterative Process (AIP) 
 The general idea is to split the development of the software into sequences of repeated cycles (iterations).
 ### [Agile Iterative Process Link](https://docs.google.com/spreadsheets/d/1n_kbtt7QxT_ALCAvM8brNtceum1OX8zb4m0UsBqBF-c/edit#gid=0)
 
--------------------------------
+
 ## Sprint planning notes and review
 The purpose of sprint planning is to define what can be delivered in the sprint and how that work will be achieved.
 ### [Sprint planning docs link](https://docs.google.com/document/d/19WqTGq6393yfdi9zWVSW7mBga2KUV8RA2Y6YoS7wM1U/edit?usp=sharing)
---------------------------------
+
 ### [Phase_2 Video Submission](https://drive.google.com/file/d/12jXQU_aEKI4CIOKC4BrwYpx9jED0UkKq/view?usp=sharing)
--------------------------------
+
 ### [Final Report file](/reports/Ackermann_Steering_Control_Phase_2.pdf)
---------------------------------
-## Building And Execute
+
+## Build And Execute
 After Execution graphs will be saved under build folder.
 ```bash
 cd your_ws/
@@ -106,7 +105,6 @@ make
 Running tests: ./test/cpp-test
 Running the controller: ./app/ackerman_steering_controller
 ```
---------------------
 
 ## Run cppcheck and cpplint
 For cppcheck
@@ -117,7 +115,7 @@ For cpplint
 ```
 sh run_cpplint.sh
 ```
------------------------
+
 ## Building for code coverage
 
 ```bash
@@ -126,7 +124,7 @@ cmake -D COVERAGE=ON -D CMAKE_BUILD_TYPE=Debug ../
 make
 make code_coverage
 ```
--------------------------
+
 ## Authors
 - Pratik Bhujbal  UID: 117555295   
   Github URL: https://github.com/prat33k-dev
