@@ -47,8 +47,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 - Additon of Coveralls and travis for code coverage
 
 ## Working
+
 As the vehicle travels along a curved path, all four tyres follow unique trajectories around a shared turn centre, as defined by the blue arcs shown below.
-----------------------------------
 <p align="left">
   <img  height="250" src="images/Model.jpg">
 </p> 
