@@ -1,4 +1,0 @@
-<map id="InverseKinematics::~InverseKinematics" name="InverseKinematics::~InverseKinematics">
-<area shape="rect" id="node2" href="$classInverseKinematics.html#a5b4820979ff3b4b6e0a3346cd472fefe" title="Calculate the left and right wheel angles based on heading output of fk. (in radians) ..." alt="" coords="194,5,345,47"/>
-<area shape="rect" id="node3" href="$classInverseKinematics.html#a7e72ae559e17363495da967d98fb7985" title="Calculate the left and right wheel speeds based on heading output of fk. (in ratations/second) ..." alt="" coords="192,71,347,112"/>
-</map>

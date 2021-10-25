@@ -1,6 +1,0 @@
-<map id="Sensor::~Sensor" name="Sensor::~Sensor">
-<area shape="rect" id="node2" href="$classSensor.html#a5bf3c3f5dfa3048bb702b5d3164bd410" title="Get current heading of robot. (in radians) " alt="" coords="173,5,357,32"/>
-<area shape="rect" id="node3" href="$classSensor.html#afea96ceec4830e07ed61f4ec12e45dec" title="Get current speed of robot. (in meters/second) " alt="" coords="181,56,350,83"/>
-<area shape="rect" id="node4" href="$classSensor.html#ade56b78666a057ce576aad448a2a5ecd" title="Set current heading of robot. (in radians) " alt="" coords="173,107,357,133"/>
-<area shape="rect" id="node5" href="$classSensor.html#ac5cbcf17f5dc8a4d8ca545d657255f54" title="Set current speed of robot. (in meters/second) " alt="" coords="179,157,352,184"/>
-</map>
