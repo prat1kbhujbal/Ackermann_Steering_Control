@@ -64,15 +64,16 @@ For a given turn radius R, wheelbase L, and track width T, the required front st
 - Robot can't go in backward direction. For this case can implement more cases instead of just go around by making a full turn in forward direction.
 - User can't give input heading in negative instead have to give positive value from 0-3.14 (in radians).
 
-## Results
-For a specific set of inputs, the desired speed and the desired heading angle is acheived within expected range of +-5%. Example shown below with convergence for input as 0.1 and 5 for desired heading and speed and output with each forward wheel velocities and angles.
-
+## Results 
+For a specific set of inputs, the desired speed and the desired heading angle is acheived within expected range of +-5%. Example shown below with convergence for input as 0.1 and 20 for desired heading and speed and output with each forward wheel velocities and angles.
+<p align="left">
+  <img  height="300"  width="500" src="images/terminal_output.png">
+</p> 
 Output on graphs for same inputs showing convergence for speed and heading:
 <p align="left">
   <img  height="300"  width="400" src="images/speed.png">
   <img  height="300"   width="400" src="images/heading.png">
 </p> 
-
 
 ## UML Diagrams:
 - ### [Activity Diagram](UML/revised/ActivityDiagram_v2.pdf)
