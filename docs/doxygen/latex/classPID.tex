@@ -1,0 +1,188 @@
+\hypertarget{classPID}{}\section{P\+ID Class Reference}
+\label{classPID}\index{P\+ID@{P\+ID}}
+
+
+Class to hold \hyperlink{classPID}{P\+ID} \hyperlink{classController}{Controller} attributes and members.  
+
+
+
+
+{\ttfamily \#include $<$pid.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classPID_a74e83c18b71000d5e9d9ff4f0832045c}{P\+ID} (double Kp, double Ki, double Kd, double dt, double min, double max)
+\begin{DoxyCompactList}\small\item\em Constructor for class \hyperlink{classPID}{P\+ID}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPID_ab7d389fc5b88d881bc25f5dafd360441}\label{classPID_ab7d389fc5b88d881bc25f5dafd360441}} 
+\hyperlink{classPID_ab7d389fc5b88d881bc25f5dafd360441}{$\sim$\+P\+ID} ()
+\begin{DoxyCompactList}\small\item\em Destructor for class \hyperlink{classPID}{P\+ID}. \end{DoxyCompactList}\item 
+double \hyperlink{classPID_acb5ef99f0f57357393fd3556a413afe9}{compute} (double current\+\_\+value, double desired\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Calculate the output based on the current value and the desired value. \end{DoxyCompactList}\item 
+double \hyperlink{classPID_a52625de61b1b2977b2c26ddb2698f14e}{get\+Kp} ()
+\begin{DoxyCompactList}\small\item\em Get the Kp value. \end{DoxyCompactList}\item 
+double \hyperlink{classPID_a89dedae29ef5a1359fd438824523bfc5}{get\+Ki} ()
+\begin{DoxyCompactList}\small\item\em Get the Ki value. \end{DoxyCompactList}\item 
+double \hyperlink{classPID_a39997546e8d1025c6c867e31e8b8e916}{get\+Kd} ()
+\begin{DoxyCompactList}\small\item\em Get the Kd value. \end{DoxyCompactList}\item 
+double \hyperlink{classPID_af8c9c5d64221b59cd56ac2543a33eb48}{get\+Dt} ()
+\begin{DoxyCompactList}\small\item\em Get the dt. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class to hold \hyperlink{classPID}{P\+ID} \hyperlink{classController}{Controller} attributes and members. 
+
+Definition at line 40 of file pid.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classPID_a74e83c18b71000d5e9d9ff4f0832045c}\label{classPID_a74e83c18b71000d5e9d9ff4f0832045c}} 
+\index{P\+ID@{P\+ID}!P\+ID@{P\+ID}}
+\index{P\+ID@{P\+ID}!P\+ID@{P\+ID}}
+\subsubsection{\texorpdfstring{P\+I\+D()}{PID()}}
+{\footnotesize\ttfamily P\+I\+D\+::\+P\+ID (\begin{DoxyParamCaption}\item[{double}]{Kp,  }\item[{double}]{Ki,  }\item[{double}]{Kd,  }\item[{double}]{dt,  }\item[{double}]{min,  }\item[{double}]{max }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor for class \hyperlink{classPID}{P\+ID}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Kp} & double -\/ Proportional gain constant \\
+\hline
+{\em Ki} & double -\/ Integral gain constant \\
+\hline
+{\em Kd} & double -\/ Deravitive gain constant \\
+\hline
+{\em dt} & double -\/ Sampling time \\
+\hline
+{\em min} & double -\/ Minimum limit of output value \\
+\hline
+{\em max} & double -\/ Maximum limit of output value \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 51 of file pid.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classPID_acb5ef99f0f57357393fd3556a413afe9}\label{classPID_acb5ef99f0f57357393fd3556a413afe9}} 
+\index{P\+ID@{P\+ID}!compute@{compute}}
+\index{compute@{compute}!P\+ID@{P\+ID}}
+\subsubsection{\texorpdfstring{compute()}{compute()}}
+{\footnotesize\ttfamily double P\+I\+D\+::compute (\begin{DoxyParamCaption}\item[{double}]{current\+\_\+value,  }\item[{double}]{desired\+\_\+value }\end{DoxyParamCaption})}
+
+
+
+Calculate the output based on the current value and the desired value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em current\+\_\+value} & double -\/ current value of system \\
+\hline
+{\em desired\+\_\+value} & double -\/ desired value of system \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=256pt]{classPID_acb5ef99f0f57357393fd3556a413afe9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classPID_af8c9c5d64221b59cd56ac2543a33eb48}\label{classPID_af8c9c5d64221b59cd56ac2543a33eb48}} 
+\index{P\+ID@{P\+ID}!get\+Dt@{get\+Dt}}
+\index{get\+Dt@{get\+Dt}!P\+ID@{P\+ID}}
+\subsubsection{\texorpdfstring{get\+Dt()}{getDt()}}
+{\footnotesize\ttfamily double P\+I\+D\+::get\+Dt (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the dt. 
+
+\begin{DoxyReturn}{Returns}
+double -\/ Sampling time 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=243pt]{classPID_af8c9c5d64221b59cd56ac2543a33eb48_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classPID_a39997546e8d1025c6c867e31e8b8e916}\label{classPID_a39997546e8d1025c6c867e31e8b8e916}} 
+\index{P\+ID@{P\+ID}!get\+Kd@{get\+Kd}}
+\index{get\+Kd@{get\+Kd}!P\+ID@{P\+ID}}
+\subsubsection{\texorpdfstring{get\+Kd()}{getKd()}}
+{\footnotesize\ttfamily double P\+I\+D\+::get\+Kd (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the Kd value. 
+
+\begin{DoxyReturn}{Returns}
+double -\/ Value of Kd 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=244pt]{classPID_a39997546e8d1025c6c867e31e8b8e916_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classPID_a89dedae29ef5a1359fd438824523bfc5}\label{classPID_a89dedae29ef5a1359fd438824523bfc5}} 
+\index{P\+ID@{P\+ID}!get\+Ki@{get\+Ki}}
+\index{get\+Ki@{get\+Ki}!P\+ID@{P\+ID}}
+\subsubsection{\texorpdfstring{get\+Ki()}{getKi()}}
+{\footnotesize\ttfamily double P\+I\+D\+::get\+Ki (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the Ki value. 
+
+\begin{DoxyReturn}{Returns}
+double -\/ Value of Ki 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{classPID_a89dedae29ef5a1359fd438824523bfc5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classPID_a52625de61b1b2977b2c26ddb2698f14e}\label{classPID_a52625de61b1b2977b2c26ddb2698f14e}} 
+\index{P\+ID@{P\+ID}!get\+Kp@{get\+Kp}}
+\index{get\+Kp@{get\+Kp}!P\+ID@{P\+ID}}
+\subsubsection{\texorpdfstring{get\+Kp()}{getKp()}}
+{\footnotesize\ttfamily double P\+I\+D\+::get\+Kp (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the Kp value. 
+
+\begin{DoxyReturn}{Returns}
+double -\/ Value of Kp 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=244pt]{classPID_a52625de61b1b2977b2c26ddb2698f14e_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/maitreya/valgrind\+\_\+ws/\+Ackermann\+\_\+\+Steering\+\_\+\+Control/include/pid.\+hpp\end{DoxyCompactItemize}

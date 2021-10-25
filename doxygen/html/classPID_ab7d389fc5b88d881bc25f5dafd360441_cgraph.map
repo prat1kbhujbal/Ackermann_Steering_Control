@@ -1,0 +1,7 @@
+<map id="PID::~PID" name="PID::~PID">
+<area shape="rect" id="node2" href="$classPID.html#acb5ef99f0f57357393fd3556a413afe9" title="Calculate the output based on the current value and the desired value. " alt="" coords="137,5,240,32"/>
+<area shape="rect" id="node3" href="$classPID.html#a52625de61b1b2977b2c26ddb2698f14e" title="Get the Kp value. " alt="" coords="145,56,232,83"/>
+<area shape="rect" id="node4" href="$classPID.html#a89dedae29ef5a1359fd438824523bfc5" title="Get the Ki value. " alt="" coords="147,107,230,133"/>
+<area shape="rect" id="node5" href="$classPID.html#a39997546e8d1025c6c867e31e8b8e916" title="Get the Kd value. " alt="" coords="145,157,232,184"/>
+<area shape="rect" id="node6" href="$classPID.html#af8c9c5d64221b59cd56ac2543a33eb48" title="Get the dt. " alt="" coords="146,208,231,235"/>
+</map>

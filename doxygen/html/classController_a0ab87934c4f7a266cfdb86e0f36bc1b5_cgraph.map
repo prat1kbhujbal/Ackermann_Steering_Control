@@ -1,0 +1,5 @@
+<map id="Controller::~Controller" name="Controller::~Controller">
+<area shape="rect" id="node2" href="$classController.html#ac0aa43a79fdc74c7bd75bf383c5b80e0" title="Get goal heading value. (0 to 3.14 radians) " alt="" coords="204,5,383,32"/>
+<area shape="rect" id="node3" href="$classController.html#ab8161275786c47cc70d1ad82f3c476e2" title="Get goal speed value. (in meters/seconds) " alt="" coords="209,56,377,83"/>
+<area shape="rect" id="node4" href="$classController.html#ad41ca82c11e43a21d32c23ad159e747b" title="Get set goal heading and speed values. " alt="" coords="228,107,359,133"/>
+</map>
