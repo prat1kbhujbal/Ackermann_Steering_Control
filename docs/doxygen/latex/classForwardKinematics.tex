@@ -1,0 +1,210 @@
+\hypertarget{classForwardKinematics}{}\section{Forward\+Kinematics Class Reference}
+\label{classForwardKinematics}\index{Forward\+Kinematics@{Forward\+Kinematics}}
+
+
+Class to apply forward kinematics.  
+
+
+
+
+{\ttfamily \#include $<$forward\+\_\+kinematics.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classForwardKinematics_aff7ff4cb9cf2c523b111f2c5f2ec5cc8}{Forward\+Kinematics} ()
+\begin{DoxyCompactList}\small\item\em Consructor for class \hyperlink{classForwardKinematics}{Forward\+Kinematics} to initialize values local variables to 0. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classForwardKinematics_a78e9a1bc65b4262f88f0f1f60f2b6368}\label{classForwardKinematics_a78e9a1bc65b4262f88f0f1f60f2b6368}} 
+\hyperlink{classForwardKinematics_a78e9a1bc65b4262f88f0f1f60f2b6368}{$\sim$\+Forward\+Kinematics} ()
+\begin{DoxyCompactList}\small\item\em Destructor for class \hyperlink{classForwardKinematics}{Forward\+Kinematics}. \end{DoxyCompactList}\item 
+double \hyperlink{classForwardKinematics_a6fdaaf30015b1628efed2407ea13c780}{get\+R1} ()
+\begin{DoxyCompactList}\small\item\em Get turning raduis from centre of rear axle. (in meters) \end{DoxyCompactList}\item 
+void \hyperlink{classForwardKinematics_ad4093b156610a520068844c7018a256e}{set\+D\+Theta} (double d\+\_\+theta)
+\begin{DoxyCompactList}\small\item\em Set change in robot heading. (in radians) \end{DoxyCompactList}\item 
+double \hyperlink{classForwardKinematics_a005d9cbb53f4dbb79b16defb52a8e76a}{calculate\+New\+Heading} (double goal\+\_\+heading)
+\begin{DoxyCompactList}\small\item\em Calculate new heading required to reach the goal heading. (in radians) \end{DoxyCompactList}\item 
+double \hyperlink{classForwardKinematics_af945b5d3d508aba54ea902674a65373c}{calculate\+New\+Speed} (double goal\+\_\+speed)
+\begin{DoxyCompactList}\small\item\em Calculate new speed required to reach the goal speed. (in meters/seconds) \end{DoxyCompactList}\item 
+bool \hyperlink{classForwardKinematics_ab5b26d5bc5c63148a7efa8361a851066}{goal\+Reached} (double goal\+\_\+heading, double goal\+\_\+speed)
+\begin{DoxyCompactList}\small\item\em Boolean value for goal reached (True/\+False) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classForwardKinematics_a7383b93f21d29c6a3db88533a809f28c}\label{classForwardKinematics_a7383b93f21d29c6a3db88533a809f28c}} 
+std\+::vector$<$ double $>$ {\bfseries heading\+\_\+vector}
+\item 
+\mbox{\Hypertarget{classForwardKinematics_a8dd3201e71a1139616fb6ce329cd7df7}\label{classForwardKinematics_a8dd3201e71a1139616fb6ce329cd7df7}} 
+std\+::vector$<$ double $>$ {\bfseries speed\+\_\+vector}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class to apply forward kinematics. 
+
+Definition at line 40 of file forward\+\_\+kinematics.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classForwardKinematics_aff7ff4cb9cf2c523b111f2c5f2ec5cc8}\label{classForwardKinematics_aff7ff4cb9cf2c523b111f2c5f2ec5cc8}} 
+\index{Forward\+Kinematics@{Forward\+Kinematics}!Forward\+Kinematics@{Forward\+Kinematics}}
+\index{Forward\+Kinematics@{Forward\+Kinematics}!Forward\+Kinematics@{Forward\+Kinematics}}
+\subsubsection{\texorpdfstring{Forward\+Kinematics()}{ForwardKinematics()}}
+{\footnotesize\ttfamily Forward\+Kinematics\+::\+Forward\+Kinematics (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Consructor for class \hyperlink{classForwardKinematics}{Forward\+Kinematics} to initialize values local variables to 0. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line 50 of file forward\+\_\+kinematics.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classForwardKinematics_a005d9cbb53f4dbb79b16defb52a8e76a}\label{classForwardKinematics_a005d9cbb53f4dbb79b16defb52a8e76a}} 
+\index{Forward\+Kinematics@{Forward\+Kinematics}!calculate\+New\+Heading@{calculate\+New\+Heading}}
+\index{calculate\+New\+Heading@{calculate\+New\+Heading}!Forward\+Kinematics@{Forward\+Kinematics}}
+\subsubsection{\texorpdfstring{calculate\+New\+Heading()}{calculateNewHeading()}}
+{\footnotesize\ttfamily double Forward\+Kinematics\+::calculate\+New\+Heading (\begin{DoxyParamCaption}\item[{double}]{goal\+\_\+heading }\end{DoxyParamCaption})}
+
+
+
+Calculate new heading required to reach the goal heading. (in radians) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em goal\+\_\+heading} & double -\/ robot\textquotesingle{}s goal heading \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double -\/ new heading required to reach the goal heading 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=335pt]{classForwardKinematics_a005d9cbb53f4dbb79b16defb52a8e76a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classForwardKinematics_af945b5d3d508aba54ea902674a65373c}\label{classForwardKinematics_af945b5d3d508aba54ea902674a65373c}} 
+\index{Forward\+Kinematics@{Forward\+Kinematics}!calculate\+New\+Speed@{calculate\+New\+Speed}}
+\index{calculate\+New\+Speed@{calculate\+New\+Speed}!Forward\+Kinematics@{Forward\+Kinematics}}
+\subsubsection{\texorpdfstring{calculate\+New\+Speed()}{calculateNewSpeed()}}
+{\footnotesize\ttfamily double Forward\+Kinematics\+::calculate\+New\+Speed (\begin{DoxyParamCaption}\item[{double}]{goal\+\_\+speed }\end{DoxyParamCaption})}
+
+
+
+Calculate new speed required to reach the goal speed. (in meters/seconds) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em goal\+\_\+speed} & double -\/ robot\textquotesingle{}s goal speed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double -\/ new speed required to reach the goal speed 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{classForwardKinematics_af945b5d3d508aba54ea902674a65373c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classForwardKinematics_a6fdaaf30015b1628efed2407ea13c780}\label{classForwardKinematics_a6fdaaf30015b1628efed2407ea13c780}} 
+\index{Forward\+Kinematics@{Forward\+Kinematics}!get\+R1@{get\+R1}}
+\index{get\+R1@{get\+R1}!Forward\+Kinematics@{Forward\+Kinematics}}
+\subsubsection{\texorpdfstring{get\+R1()}{getR1()}}
+{\footnotesize\ttfamily double Forward\+Kinematics\+::get\+R1 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get turning raduis from centre of rear axle. (in meters) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double -\/ turning raduis from centre of rear axle (in meters) 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{classForwardKinematics_a6fdaaf30015b1628efed2407ea13c780_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classForwardKinematics_ab5b26d5bc5c63148a7efa8361a851066}\label{classForwardKinematics_ab5b26d5bc5c63148a7efa8361a851066}} 
+\index{Forward\+Kinematics@{Forward\+Kinematics}!goal\+Reached@{goal\+Reached}}
+\index{goal\+Reached@{goal\+Reached}!Forward\+Kinematics@{Forward\+Kinematics}}
+\subsubsection{\texorpdfstring{goal\+Reached()}{goalReached()}}
+{\footnotesize\ttfamily bool Forward\+Kinematics\+::goal\+Reached (\begin{DoxyParamCaption}\item[{double}]{goal\+\_\+heading,  }\item[{double}]{goal\+\_\+speed }\end{DoxyParamCaption})}
+
+
+
+Boolean value for goal reached (True/\+False) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em goal\+\_\+heading} & double -\/ robot\textquotesingle{}s goal heading \\
+\hline
+{\em goal\+\_\+speed} & double -\/ robot\textquotesingle{}s goal speed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{classForwardKinematics_ab5b26d5bc5c63148a7efa8361a851066_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classForwardKinematics_ad4093b156610a520068844c7018a256e}\label{classForwardKinematics_ad4093b156610a520068844c7018a256e}} 
+\index{Forward\+Kinematics@{Forward\+Kinematics}!set\+D\+Theta@{set\+D\+Theta}}
+\index{set\+D\+Theta@{set\+D\+Theta}!Forward\+Kinematics@{Forward\+Kinematics}}
+\subsubsection{\texorpdfstring{set\+D\+Theta()}{setDTheta()}}
+{\footnotesize\ttfamily void Forward\+Kinematics\+::set\+D\+Theta (\begin{DoxyParamCaption}\item[{double}]{d\+\_\+theta }\end{DoxyParamCaption})}
+
+
+
+Set change in robot heading. (in radians) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em d\+\_\+theta} & double -\/ change in robot\textquotesingle{}s heading. (in radians) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{classForwardKinematics_ad4093b156610a520068844c7018a256e_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/maitreya/valgrind\+\_\+ws/\+Ackermann\+\_\+\+Steering\+\_\+\+Control/include/forward\+\_\+kinematics.\+hpp\end{DoxyCompactItemize}

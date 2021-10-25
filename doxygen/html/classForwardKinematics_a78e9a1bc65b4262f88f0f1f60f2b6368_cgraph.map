@@ -1,0 +1,7 @@
+<map id="ForwardKinematics::~ForwardKinematics" name="ForwardKinematics::~ForwardKinematics">
+<area shape="rect" id="node2" href="$classForwardKinematics.html#a6fdaaf30015b1628efed2407ea13c780" title="Get turning raduis from centre of rear axle. (in meters) " alt="" coords="199,5,342,47"/>
+<area shape="rect" id="node3" href="$classForwardKinematics.html#ad4093b156610a520068844c7018a256e" title="Set change in robot heading. (in radians) " alt="" coords="199,71,342,112"/>
+<area shape="rect" id="node4" href="$classForwardKinematics.html#a005d9cbb53f4dbb79b16defb52a8e76a" title="Calculate new heading required to reach the goal heading. (in radians) " alt="" coords="196,136,345,177"/>
+<area shape="rect" id="node5" href="$classForwardKinematics.html#af945b5d3d508aba54ea902674a65373c" title="Calculate new speed required to reach the goal speed. (in meters/seconds) " alt="" coords="199,201,342,243"/>
+<area shape="rect" id="node6" href="$classForwardKinematics.html#ab5b26d5bc5c63148a7efa8361a851066" title="Boolean value for goal reached (True/False) " alt="" coords="199,267,342,308"/>
+</map>

@@ -1,0 +1,116 @@
+\hypertarget{classController}{}\section{Controller Class Reference}
+\label{classController}\index{Controller@{Controller}}
+
+
+Class to hold goal attributes and members.  
+
+
+
+
+{\ttfamily \#include $<$controller.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classController_a95c56822d667e94b031451729ce069a9}\label{classController_a95c56822d667e94b031451729ce069a9}} 
+\hyperlink{classController_a95c56822d667e94b031451729ce069a9}{Controller} ()
+\begin{DoxyCompactList}\small\item\em Constrctor of Class \hyperlink{classController}{Controller} to initialize goal values. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classController_a0ab87934c4f7a266cfdb86e0f36bc1b5}\label{classController_a0ab87934c4f7a266cfdb86e0f36bc1b5}} 
+\hyperlink{classController_a0ab87934c4f7a266cfdb86e0f36bc1b5}{$\sim$\+Controller} ()
+\begin{DoxyCompactList}\small\item\em Destructor of class \hyperlink{classController}{Controller}. \end{DoxyCompactList}\item 
+double \hyperlink{classController_ac0aa43a79fdc74c7bd75bf383c5b80e0}{get\+Goal\+Heading} ()
+\begin{DoxyCompactList}\small\item\em Get goal heading value. (0 to 3.\+14 radians) \end{DoxyCompactList}\item 
+double \hyperlink{classController_ab8161275786c47cc70d1ad82f3c476e2}{get\+Goal\+Speed} ()
+\begin{DoxyCompactList}\small\item\em Get goal speed value. (in meters/seconds) \end{DoxyCompactList}\item 
+void \hyperlink{classController_ad41ca82c11e43a21d32c23ad159e747b}{set\+Goal} (double goal\+\_\+heading, double goal\+\_\+speed)
+\begin{DoxyCompactList}\small\item\em Get set goal heading and speed values. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class to hold goal attributes and members. 
+
+Definition at line 40 of file controller.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classController_ac0aa43a79fdc74c7bd75bf383c5b80e0}\label{classController_ac0aa43a79fdc74c7bd75bf383c5b80e0}} 
+\index{Controller@{Controller}!get\+Goal\+Heading@{get\+Goal\+Heading}}
+\index{get\+Goal\+Heading@{get\+Goal\+Heading}!Controller@{Controller}}
+\subsubsection{\texorpdfstring{get\+Goal\+Heading()}{getGoalHeading()}}
+{\footnotesize\ttfamily double Controller\+::get\+Goal\+Heading (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get goal heading value. (0 to 3.\+14 radians) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double -\/ \hyperlink{classRobot}{Robot}\textquotesingle{}s goal heading (in radians) 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classController_ac0aa43a79fdc74c7bd75bf383c5b80e0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classController_ab8161275786c47cc70d1ad82f3c476e2}\label{classController_ab8161275786c47cc70d1ad82f3c476e2}} 
+\index{Controller@{Controller}!get\+Goal\+Speed@{get\+Goal\+Speed}}
+\index{get\+Goal\+Speed@{get\+Goal\+Speed}!Controller@{Controller}}
+\subsubsection{\texorpdfstring{get\+Goal\+Speed()}{getGoalSpeed()}}
+{\footnotesize\ttfamily double Controller\+::get\+Goal\+Speed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get goal speed value. (in meters/seconds) 
+
+\begin{DoxyReturn}{Returns}
+double -\/ \hyperlink{classRobot}{Robot}\textquotesingle{}s goal speed (in meters/seconds) 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classController_ab8161275786c47cc70d1ad82f3c476e2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classController_ad41ca82c11e43a21d32c23ad159e747b}\label{classController_ad41ca82c11e43a21d32c23ad159e747b}} 
+\index{Controller@{Controller}!set\+Goal@{set\+Goal}}
+\index{set\+Goal@{set\+Goal}!Controller@{Controller}}
+\subsubsection{\texorpdfstring{set\+Goal()}{setGoal()}}
+{\footnotesize\ttfamily void Controller\+::set\+Goal (\begin{DoxyParamCaption}\item[{double}]{goal\+\_\+heading,  }\item[{double}]{goal\+\_\+speed }\end{DoxyParamCaption})}
+
+
+
+Get set goal heading and speed values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em goal\+\_\+heading} & (0 to 3.\+14 radians) \\
+\hline
+{\em goal\+\_\+speed} & (in meters/seconds) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=327pt]{classController_ad41ca82c11e43a21d32c23ad159e747b_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/maitreya/valgrind\+\_\+ws/\+Ackermann\+\_\+\+Steering\+\_\+\+Control/include/controller.\+hpp\end{DoxyCompactItemize}
