@@ -93,3 +93,37 @@ The purpose of sprint planning is to define what can be delivered in the sprint 
 -------------------------------
 ### [Final Report file](/reports/Ackermann_Steering_Control_Phase_2.pdf)
 --------------------------------
+## Building And Execute
+After Execution graphs will be saved under build folder.
+```bash
+cd your_ws/
+git clone --recursive https://github.com/Prat33k-dev/Ackermann_Steering_Control.git
+cd Ackermann_Steering_Control/
+mkdir build
+cd build/
+cmake ..
+make 
+Running tests: ./test/cpp-test
+Running the controller: ./app/ackerman_steering_controller
+```
+--------------------
+
+## Run cppcheck and cpplint
+For cppcheck
+```bash
+sh run_cppcheck.sh
+```
+For cpplint
+```
+sh run_cpplint.sh
+```
+-----------------------
+## Building for code coverage
+
+```bash
+sudo apt-get install lcov
+cmake -D COVERAGE=ON -D CMAKE_BUILD_TYPE=Debug ../
+make
+make code_coverage
+```
+-------------------------
