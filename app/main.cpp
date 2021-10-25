@@ -17,7 +17,6 @@
 #include<sensor.hpp>
 #include<iostream>
 #include<convergence.hpp>
-#include<string>
 
 int main() {
   double goal_heading, goal_speed;
@@ -46,6 +45,5 @@ int main() {
   std::string h2 = "speed.png";
   c1.plotConvergence(goal_heading, fk.heading_vector, h1);
   c1.plotConvergence(goal_speed, fk.speed_vector, h2);
-  
   return 0;
 }

@@ -17,7 +17,7 @@
 #include<controller.hpp>
 #include<sensor.hpp>
 #include<robot.hpp>
-#include <convergence.hpp>
+#include<convergence.hpp>
 
 PID pid_steer(1, 1, 1, 0.2, -0.785, 0.785);
 PID pid_speed(0.1, 0.1, 0.2, 0.2, 0, 10);
@@ -70,19 +70,18 @@ double ForwardKinematics::calculateNewHeading(double goal_heading) {
 
 double ForwardKinematics::calculateNewSpeed(double goal_speed) {
   _new_speed = pid_speed.compute(sensor1.getCurrentSpeed(), goal_speed);
-  if (_new_speed > 20)
-    _new_speed = 20;
+  if (_new_speed > goal_speed)
+    _new_speed = goal_speed;
   sensor1.setCurrerntSpeed(_new_speed);
   speed_vector.push_back(sensor1.getCurrentSpeed());
-
   return _new_speed;
 }
 
 bool ForwardKinematics::goalReached(double goal_heading, double goal_speed) {
-  if (sensor1.getCurrerntHeading() <= goal_heading-0.001 &&
-      sensor1.getCurrerntHeading() <= (goal_heading + 0.001)
+  if (sensor1.getCurrerntHeading() <= goal_heading &&
+      sensor1.getCurrerntHeading() <= (goal_heading + 0.05)
       && sensor1.getCurrentSpeed() <= goal_speed &&
-      sensor1.getCurrentSpeed() <= (goal_speed + 0.05)) 
-        return true;
-
+      sensor1.getCurrentSpeed() <= (goal_speed + 0.05))
+    return true;
+  return false; 
 }

@@ -1,38 +1,33 @@
 /** 
- * @file convergence.hpp
+ * @file controller.hpp
  * @author Maitreya Kulkarni
  * @author Pratik Bhujbal
  * @author Maaruf Vazifdar
- * @brief A class to visualize convergence to goal.
+ * @brief A class to hold controller  goal attributes and its members.
  * @version 1.1
- * @date 10/19/2021
+ * @date 10/15/2021
  * Copyright [2021] ENPM808X group - MT-15
  */
 
 #pragma once
-
 /**
- * @brief Class to visualize convergence.
+ * @brief Class to visualize Convergence
  */
 class Convergence{
   public:
-  
   /**
-   * @brief Consructor for class Convergence
-   * @param void
-   * @return void
-   */
+    * @brief Constructor for class Convergence
+    */
   Convergence(){}
   /**
- * @brief Destructor for class Convergence
- */
+    * @brief Destructor for class Convergence
+    */
   ~Convergence(){}
 
    /**
-  * @brief Calculate new speed required to reach the goal speed.
-  * @param goal double - robot's goal speed/heading 
-  * @param current double - vector storing robot's current speed/heading
-  * @return void
-  */
-  void plotConvergence(double, std::vector<double>, std::string);
+   * @brief plot convergence of robot's heading and speed
+   * @param double - speed output from fk
+   * @return void
+   */
+  int plotConvergence(double, std::vector<double>, std::string);
 };
