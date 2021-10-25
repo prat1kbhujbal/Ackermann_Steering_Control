@@ -9,20 +9,19 @@
  * Copyright [2021] ENPM808X group - MT-15
  */
 
+#include<iostream>
 #include<pid.hpp>
 #include<robot.hpp>
 #include<controller.hpp>
 #include<forward_kinematics.hpp>
 #include <inverse_kinematics.hpp>
 #include<sensor.hpp>
-#include<iostream>
 #include<convergence.hpp>
 
 int main() {
   double goal_heading, goal_speed;
 
   std::cout << "Ackermann controller" << std::endl;
-  
   std::cout << "Enter goal heading: "<< std::endl;
   std::cin >> goal_heading;
   std::cout << "Enter goal speed: " << std::endl;

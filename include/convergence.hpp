@@ -10,24 +10,27 @@
  */
 
 #pragma once
+#include<string>
+#include<vector>
+
 /**
  * @brief Class to visualize Convergence
  */
 class Convergence{
-  public:
+ public:
   /**
     * @brief Constructor for class Convergence
     */
-  Convergence(){}
+  Convergence() {}
   /**
     * @brief Destructor for class Convergence
     */
-  ~Convergence(){}
+  ~Convergence() {}
 
    /**
    * @brief plot convergence of robot's heading and speed
    * @param double - speed output from fk
    * @return void
    */
-  int plotConvergence(double, std::vector<double>, std::string);
+  int plotConvergence(double, std::vector<double> &, std::string &);
 };

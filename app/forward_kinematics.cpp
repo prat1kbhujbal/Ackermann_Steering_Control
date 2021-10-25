@@ -83,5 +83,5 @@ bool ForwardKinematics::goalReached(double goal_heading, double goal_speed) {
       && sensor1.getCurrentSpeed() <= goal_speed &&
       sensor1.getCurrentSpeed() <= (goal_speed + 0.05))
     return true;
-  return false; 
+  return false;
 }
