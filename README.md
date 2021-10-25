@@ -127,3 +127,10 @@ make
 make code_coverage
 ```
 -------------------------
+## Authors
+- Pratik Bhujbal  UID: 117555295   
+  Github URL: https://github.com/prat33k-dev
+- Maitreya Kulkarni UID: 117506075  
+  Github URL: https://github.com/maitreya98
+- Maaruf Vazifdar UID: 117509717  
+  Github URL: https://github.com/maarufvazifdar
