@@ -1,0 +1,91 @@
+\hypertarget{classInverseKinematics}{}\section{Inverse\+Kinematics Class Reference}
+\label{classInverseKinematics}\index{Inverse\+Kinematics@{Inverse\+Kinematics}}
+
+
+Class to apply inverse kinematics.  
+
+
+
+
+{\ttfamily \#include $<$inverse\+\_\+kinematics.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classInverseKinematics_a5ac416b45f9039ce28836cd73193d04b}\label{classInverseKinematics_a5ac416b45f9039ce28836cd73193d04b}} 
+\hyperlink{classInverseKinematics_a5ac416b45f9039ce28836cd73193d04b}{Inverse\+Kinematics} ()
+\begin{DoxyCompactList}\small\item\em Constructor for class \hyperlink{classInverseKinematics}{Inverse\+Kinematics}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classInverseKinematics_af82fba3aeac080112db67265438bf30c}\label{classInverseKinematics_af82fba3aeac080112db67265438bf30c}} 
+\hyperlink{classInverseKinematics_af82fba3aeac080112db67265438bf30c}{$\sim$\+Inverse\+Kinematics} ()
+\begin{DoxyCompactList}\small\item\em Destructor for class \hyperlink{classInverseKinematics}{Inverse\+Kinematics}. \end{DoxyCompactList}\item 
+void \hyperlink{classInverseKinematics_a5b4820979ff3b4b6e0a3346cd472fefe}{calculate\+Wheel\+Angles} (double)
+\begin{DoxyCompactList}\small\item\em Calculate the left and right wheel angles based on heading output of fk. (in radians) \end{DoxyCompactList}\item 
+void \hyperlink{classInverseKinematics_a7e72ae559e17363495da967d98fb7985}{calculate\+Wheel\+Speeds} (double)
+\begin{DoxyCompactList}\small\item\em Calculate the left and right wheel speeds based on heading output of fk. (in ratations/second) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class to apply inverse kinematics. 
+
+Definition at line 40 of file inverse\+\_\+kinematics.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classInverseKinematics_a5b4820979ff3b4b6e0a3346cd472fefe}\label{classInverseKinematics_a5b4820979ff3b4b6e0a3346cd472fefe}} 
+\index{Inverse\+Kinematics@{Inverse\+Kinematics}!calculate\+Wheel\+Angles@{calculate\+Wheel\+Angles}}
+\index{calculate\+Wheel\+Angles@{calculate\+Wheel\+Angles}!Inverse\+Kinematics@{Inverse\+Kinematics}}
+\subsubsection{\texorpdfstring{calculate\+Wheel\+Angles()}{calculateWheelAngles()}}
+{\footnotesize\ttfamily void Inverse\+Kinematics\+::calculate\+Wheel\+Angles (\begin{DoxyParamCaption}\item[{double}]{ }\end{DoxyParamCaption})}
+
+
+
+Calculate the left and right wheel angles based on heading output of fk. (in radians) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em double} & -\/ heading output from fk (in radians) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=333pt]{classInverseKinematics_a5b4820979ff3b4b6e0a3346cd472fefe_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classInverseKinematics_a7e72ae559e17363495da967d98fb7985}\label{classInverseKinematics_a7e72ae559e17363495da967d98fb7985}} 
+\index{Inverse\+Kinematics@{Inverse\+Kinematics}!calculate\+Wheel\+Speeds@{calculate\+Wheel\+Speeds}}
+\index{calculate\+Wheel\+Speeds@{calculate\+Wheel\+Speeds}!Inverse\+Kinematics@{Inverse\+Kinematics}}
+\subsubsection{\texorpdfstring{calculate\+Wheel\+Speeds()}{calculateWheelSpeeds()}}
+{\footnotesize\ttfamily void Inverse\+Kinematics\+::calculate\+Wheel\+Speeds (\begin{DoxyParamCaption}\item[{double}]{ }\end{DoxyParamCaption})}
+
+
+
+Calculate the left and right wheel speeds based on heading output of fk. (in ratations/second) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em double} & -\/ speed output from fk (in meters/second) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{classInverseKinematics_a7e72ae559e17363495da967d98fb7985_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/maitreya/valgrind\+\_\+ws/\+Ackermann\+\_\+\+Steering\+\_\+\+Control/include/inverse\+\_\+kinematics.\+hpp\end{DoxyCompactItemize}

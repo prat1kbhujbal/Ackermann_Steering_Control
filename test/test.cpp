@@ -1,20 +1,59 @@
+/**
+ * MIT License
+ *
+ * Copyright (c) 2021 Maaruf Vazifdar, Maitreya Kulkarni, Pratik Bhujnbal
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to 
+ * deal in the Software without restriction, including without limitation the  
+ * rights to use, copy, modify, merge, publish, distribute, sublicense, and/or 
+ * sell copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in 
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING 
+ * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER 
+ * DEALINGS IN THE SOFTWARE. 
+ * 
+ * @file controller.cpp
+ * @author Maaruf Vazifdar
+ * @author Maitreya Kulkarni
+ * @author Pratik Bhujnbal
+ * @brief Implementation file for ackermann controller goal attributes
+ *        and its members.
+ * @version 1.1
+ * @date 10/15/2021
+ * @copyright  Copyright (c) 2021
+ * 
+ */
+
 #include <gtest/gtest.h>
-#include <iostream>
+#include <string>
 #include "../include/pid.hpp"
 #include "../include/controller.hpp"
 #include "../include/robot.hpp"
 #include "../include/sensor.hpp"
 #include "../include/forward_kinematics.hpp"
 #include "../include/inverse_kinematics.hpp"
+#include "../include/convergence.hpp"
+
+/**
+* @brief Test for pid compute member
+*/
 TEST(computePidTest, gain_update_check) {
     PID pid(0.8, 0.5, 0.3, 1.0, -20, 20);
     double something = pid.compute(0, 5);
-    std::cout<<something<<std::endl;
     EXPECT_NEAR(something, 8, 0.5);
-    EXPECT_EQ(0.8,pid.getKp());
+    EXPECT_EQ(0.8, pid.getKp());
     EXPECT_EQ(0.5, pid.getKi());
     EXPECT_EQ(0.3, pid.getKd());
-    EXPECT_EQ(1.0,pid.getDt());
+    EXPECT_EQ(1.0, pid.getDt());
 }
 /**
 * @brief Test for invalid sampling time
@@ -45,8 +84,8 @@ TEST(invalidGains, checkParameters) {
 TEST(goalsetterTest, controllerTest) {
     Controller controller;
     controller.setGoal(0.5, 10);
-    EXPECT_EQ(10,controller.getGoalSpeed());
-    EXPECT_EQ(0.5,controller.getGoalHeading());
+    EXPECT_EQ(10, controller.getGoalSpeed());
+    EXPECT_EQ(0.5, controller.getGoalHeading());
 }
 
 TEST(robotTest, robotMembersTest) {
@@ -66,7 +105,7 @@ TEST(robotTest, robotMembersTest) {
     EXPECT_EQ(0.785, robot.getMaxSteerAngle());
 }
 
-TEST(sensorTest, sensorMemberTest){
+TEST(sensorTest, sensorMemberTest) {
     Sensor sensor;
     sensor.setCurrerntHeading(0.5);
     sensor.setCurrerntSpeed(5);
@@ -80,6 +119,10 @@ TEST(InverseKinematicsTest, inverseKinematicsMembersTest) {
     InverseKinematics ik1;
     ik1.calculateWheelAngles(0.1);
     ik1.calculateWheelSpeeds(10);
+    EXPECT_NEAR(robot2.getLeftWheelAng(), 0, 1);
+    EXPECT_NEAR(robot2.getRightWheelAng(), 0, 1);
+    EXPECT_NEAR(robot2.getLeftWheelVel(), 0.01, 1);
+    EXPECT_NEAR(robot2.getRightWheelVel(), 0.01, 1);
 }
 
 TEST(InverseKinematicsTest1, inverseKinematicsMembersTest) {
@@ -87,7 +130,23 @@ TEST(InverseKinematicsTest1, inverseKinematicsMembersTest) {
     ForwardKinematics fk3;
     InverseKinematics ik2;
     ik2.calculateWheelAngles(-0.1);
-    ik2.calculateWheelSpeeds(10);   
+    ik2.calculateWheelSpeeds(5);
+    EXPECT_NEAR(robot3.getLeftWheelAng(), 0, 1);
+    EXPECT_NEAR(robot3.getRightWheelAng(), 0, 1);
+    EXPECT_NEAR(robot3.getLeftWheelVel(), 0.01, 1);
+    EXPECT_NEAR(robot3.getRightWheelVel(), 0.01, 1);
+}
+
+TEST(InverseKinematicsTest2, inverseKinematicsMembersTest) {
+    Robot robot4(4, 2, 0.3, 0.01, 0.01, 0, 0, 1, 0.785);
+    ForwardKinematics fk4;
+    InverseKinematics ik3;
+    ik3.calculateWheelAngles(1);
+    ik3.calculateWheelSpeeds(8);
+    EXPECT_NEAR(robot4.getLeftWheelAng(), 0, 1);
+    EXPECT_NEAR(robot4.getRightWheelAng(), 0, 1);
+    EXPECT_NEAR(robot4.getLeftWheelVel(), 0.01, 1);
+    EXPECT_NEAR(robot4.getRightWheelVel(), 0.01, 1);
 }
 
 TEST(forwardKinematicsTest, forwardKinematicsMemeberTest) {
@@ -99,9 +158,9 @@ TEST(forwardKinematicsTest, forwardKinematicsMemeberTest) {
     sensor1.setCurrerntSpeed(10);
     Robot robot1(4, 2, 0.3, 0.1, 0.1, 0, 0, 1, 0.785);
     fk.setDTheta(0.1);
-    EXPECT_EQ(0,fk.getR1());
-    EXPECT_NEAR(fk.calculateNewHeading(0.1), 0.785, 0.1);
-    EXPECT_NEAR(fk.calculateNewSpeed(5), 1, 0.1);
+    EXPECT_EQ(0, fk.getR1());
+    EXPECT_NEAR(fk.calculateNewHeading(0.1), 0.62, 0.1);
+    EXPECT_NEAR(fk.calculateNewSpeed(5), 5, 0.1);
     EXPECT_TRUE(fk.goalReached(0.1, 10));
 }
 
@@ -110,13 +169,15 @@ TEST(forwardKinematicsTest1, forwardKinematicsMemeberTest) {
     PID pid_steer1(1, 1, 1, 0.1, -0.785, 0.785);
     PID pid_speed1(1, 1, 1, 0.1, 0, 1);
     Sensor sensor2;
+    Convergence c1;
     sensor2.setCurrerntHeading(0.1);
     sensor2.setCurrerntSpeed(10);
     Robot robot2(4, 2, 0.3, 0.1, 0.1, 0, 0, 1, 0.785);
     fk1.setDTheta(0.1);
-    EXPECT_EQ(0,fk1.getR1());
+    std::vector<double> my_vector{1, 2, 3};
+    std::string my_string = "speed.png";
+    EXPECT_EQ(0, fk1.getR1());
     EXPECT_NEAR(fk1.calculateNewHeading(-0.1), -0.785, 0.1);
-    EXPECT_NEAR(fk1.calculateNewSpeed(5), 1, 0.1);
+    EXPECT_NEAR(fk1.calculateNewSpeed(5), 5, 0.1);
+    EXPECT_EQ(1, c1.plotConvergence(0.1, my_vector, my_string));
 }
-
-

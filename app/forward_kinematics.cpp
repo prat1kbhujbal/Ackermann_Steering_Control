@@ -1,13 +1,36 @@
-/** 
- * @file forward_kinematics.cpp
- * @author Pratik Bhujbal
+/**
+ * MIT License
+ *
+ * Copyright (c) 2021 Maaruf Vazifdar, Maitreya Kulkarni, Pratik Bhujnbal
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to 
+ * deal in the Software without restriction, including without limitation the  
+ * rights to use, copy, modify, merge, publish, distribute, sublicense, and/or 
+ * sell copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in 
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING 
+ * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER 
+ * DEALINGS IN THE SOFTWARE. 
+ * 
+ * @file controller.cpp
  * @author Maaruf Vazifdar
  * @author Maitreya Kulkarni
- * @brief Implementation of class to calculate forward kinematics of 
- *        ackermann robot
+ * @author Pratik Bhujnbal
+ * @brief Implementation file for ackermann controller goal attributes
+ *        and its members.
  * @version 1.1
  * @date 10/15/2021
- * Copyright [2021] ENPM808X group - MT-15
+ * @copyright  Copyright (c) 2021
+ * 
  */
 
 #include<iostream>
@@ -17,9 +40,10 @@
 #include<controller.hpp>
 #include<sensor.hpp>
 #include<robot.hpp>
+#include<convergence.hpp>
 
-PID pid_steer(1, 1, 1, 0.1, -0.785, 0.785);
-PID pid_speed(1, 1, 1, 0.1, 0, 1);
+PID pid_steer(1, 1, 1, 0.2, -0.785, 0.785);
+PID pid_speed(0.1, 0.1, 0.2, 0.2, 0, 10);
 Sensor sensor1;
 Robot robot1(4, 2, 0.3, 0.1, 0.1, 0, 0, 1, 0.785);
 
@@ -44,7 +68,7 @@ double ForwardKinematics::calculateNewHeading(double goal_heading) {
   _R1 = sqrt(pow(_R, 2) - pow(robot1.getComOffset(), 2));
 
   _d_theta = (robot1.getWheelRadius() * robot1.getLeftWheelVel()
-      * pid_steer. getDt()) / (_R1 + (robot1.getTrackWidth() / 2));
+      * 1) / (_R1 + (robot1.getTrackWidth() / 2));
       setDTheta(_d_theta);
   } else if (_new_heading < 0.01) {   // Right Turn
     _R = sqrt(pow(robot1.getComOffset(), 2) + (pow(robot1.getWheelBase(), 2)
@@ -53,16 +77,16 @@ double ForwardKinematics::calculateNewHeading(double goal_heading) {
   _R1 = sqrt(pow(_R, 2) - pow(robot1.getComOffset(), 2));
 
   _d_theta = -(robot1.getWheelRadius() * robot1.getLeftWheelVel()
-             * pid_steer.getDt()) / (_R1 + (robot1.getTrackWidth() / 2));
+             * 1) / (_R1 + (robot1.getTrackWidth() / 2));
   } else {
     _new_heading = 0;
   }
 
   sensor1.setCurrerntHeading(sensor1.getCurrerntHeading() + _d_theta);
+  heading_vector.push_back(sensor1.getCurrerntHeading());
 
-  std::cout << "cur heading= " << sensor1.getCurrerntHeading() << std::endl;
-  std::cout << "d theta= " << _d_theta << std::endl;
-
+  std::cout << "Current Robot heading= " << sensor1.getCurrerntHeading()
+  << std::endl;
   return _new_heading;
 }
 
@@ -71,7 +95,7 @@ double ForwardKinematics::calculateNewSpeed(double goal_speed) {
   if (_new_speed > goal_speed)
     _new_speed = goal_speed;
   sensor1.setCurrerntSpeed(_new_speed);
-
+  speed_vector.push_back(sensor1.getCurrentSpeed());
   return _new_speed;
 }
 
@@ -81,4 +105,5 @@ bool ForwardKinematics::goalReached(double goal_heading, double goal_speed) {
       && sensor1.getCurrentSpeed() <= goal_speed &&
       sensor1.getCurrentSpeed() <= (goal_speed + 0.05))
     return true;
+  return false;
 }

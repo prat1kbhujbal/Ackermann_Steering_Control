@@ -1,0 +1,17 @@
+Done processing ./app/controller.cpp
+Done processing ./app/convergence.cpp
+Done processing ./app/forward_kinematics.cpp
+Done processing ./app/inverse_kinematics.cpp
+Done processing ./app/main.cpp
+Done processing ./app/pid.cpp
+Done processing ./app/robot.cpp
+Done processing ./app/sensor.cpp
+Done processing ./include/controller.hpp
+Done processing ./include/convergence.hpp
+Done processing ./include/forward_kinematics.hpp
+Done processing ./include/inverse_kinematics.hpp
+Done processing ./include/pid.hpp
+Done processing ./include/robot.hpp
+Done processing ./include/sensor.hpp
+Done processing ./test/main.cpp
+Done processing ./test/test.cpp

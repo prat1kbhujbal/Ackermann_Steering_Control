@@ -1,0 +1,278 @@
+==23808== Memcheck, a memory error detector
+==23808== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==23808== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==23808== Command: app/shell-app
+==23808== 
+Ackermann controller
+Enter goal heading (0-3.14 radian counter-clockwise): 
+0.1
+Enter goal speed (<20 m/s): 
+20
+==24718==    at 0x12E122: SetPixel(RGBABitmapImage*, double, double, RGBA*) (pbPlots.cpp:1705)
+==24718==    by 0x12DC19: CreateImage(double, double, RGBA*) (pbPlots.cpp:1668)
+==24718==    by 0x125A03: DrawScatterPlotFromSettings(RGBABitmapImageReference*, ScatterPlotSettings*) (pbPlots.cpp:595)
+==24718==    by 0x12594A: DrawScatterPlot(RGBABitmapImageReference*, double, double, std::vector<double, std::allocator<double> >*, std::vector<double, std::allocator<double> >*) (pbPlots.cpp:573)
+==24718==    by 0x120EF1: Convergence::plotConvergence(double, std::vector<double, std::allocator<double> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&) (convergence.cpp:54)
+==24718==    by 0x11E901: main (main.cpp:67)
+==24718== 
+==24718== HEAP SUMMARY:
+==24718==     in use at exit: 13,056,588 bytes in 327,019 blocks
+==24718==   total heap usage: 327,044 allocs, 25 frees, 13,133,014 bytes allocated
+==24718== 
+==24718== 8 bytes in 1 blocks are still reachable in loss record 1 of 29
+==24718==    at 0x4C3217F: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==24718==    by 0x1229DB: CreateRGBABitmapImageReference() (pbPlots.cpp:146)
+==24718==    by 0x120E16: Convergence::plotConvergence(double, std::vector<double, std::allocator<double> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&) (convergence.cpp:44)
+==24718==    by 0x11E901: main (main.cpp:67)
+==24718== 
+==24718== 8 bytes in 1 blocks are still reachable in loss record 2 of 29
+==24718==    at 0x4C3217F: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==24718==    by 0x1229F0: CreateRGBABitmapImageReference() (pbPlots.cpp:147)
+==24718==    by 0x120E16: Convergence::plotConvergence(double, std::vector<double, std::allocator<double> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&) (convergence.cpp:44)
+==24718==    by 0x11E901: main (main.cpp:67)
+==24718== 
+==24718== 8 bytes in 1 blocks are still reachable in loss record 3 of 29
+==24718==    at 0x4C3217F: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==24718==    by 0x14EFDD: __gnu_cxx::new_allocator<ScatterPlotSeries*>::allocate(unsigned long, void const*) (new_allocator.h:111)
+==24718==    by 0x14E970: std::allocator_traits<std::allocator<ScatterPlotSeries*> >::allocate(std::allocator<ScatterPlotSeries*>&, unsigned long) (alloc_traits.h:436)
+==24718==    by 0x14E193: std::_Vector_base<ScatterPlotSeries*, std::allocator<ScatterPlotSeries*> >::_M_allocate(unsigned long) (stl_vector.h:172)
+==24718==    by 0x14D570: std::_Vector_base<ScatterPlotSeries*, std::allocator<ScatterPlotSeries*> >::_M_create_storage(unsigned long) (stl_vector.h:187)
+==24718==    by 0x14C488: std::_Vector_base<ScatterPlotSeries*, std::allocator<ScatterPlotSeries*> >::_Vector_base(unsigned long, std::allocator<ScatterPlotSeries*> const&) (stl_vector.h:138)
+==24718==    by 0x14B559: std::vector<ScatterPlotSeries*, std::allocator<ScatterPlotSeries*> >::vector(unsigned long, std::allocator<ScatterPlotSeries*> const&) (stl_vector.h:284)
+==24718==    by 0x12585D: DrawScatterPlot(RGBABitmapImageReference*, double, double, std::vector<double, std::allocator<double> >*, std::vector<double, std::allocator<double> >*) (pbPlots.cpp:566)
+==24718==    by 0x120EF1: Convergence::plotConvergence(double, std::vector<double, std::allocator<double> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&) (convergence.cpp:54)
+==24718==    by 0x11E901: main (main.cpp:67)
+==24718== 
+==24718== 8 bytes in 1 blocks are still reachable in loss record 4 of 29
+==24718==    at 0x4C3217F: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==24718==    by 0x12D933: CreateImage(double, double, RGBA*) (pbPlots.cpp:1661)
+==24718==    by 0x125A03: DrawScatterPlotFromSettings(RGBABitmapImageReference*, ScatterPlotSettings*) (pbPlots.cpp:595)
+==24718==    by 0x12594A: DrawScatterPlot(RGBABitmapImageReference*, double, double, std::vector<double, std::allocator<double> >*, std::vector<double, std::allocator<double> >*) (pbPlots.cpp:573)
+==24718==    by 0x120EF1: Convergence::plotConvergence(double, std::vector<double, std::allocator<double> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&) (convergence.cpp:54)
+==24718==    by 0x11E901: main (main.cpp:67)
+==24718== 
+==24718== 20 bytes in 1 blocks are still reachable in loss record 5 of 29
+==24718==    at 0x4C3217F: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==24718==    by 0x14EF6D: __gnu_cxx::new_allocator<wchar_t>::allocate(unsigned long, void const*) (new_allocator.h:111)
+==24718==    by 0x14E906: std::allocator_traits<std::allocator<wchar_t> >::allocate(std::allocator<wchar_t>&, unsigned long) (alloc_traits.h:436)
+==24718==    by 0x14E109: std::_Vector_base<wchar_t, std::allocator<wchar_t> >::_M_allocate(unsigned long) (stl_vector.h:172)
+==24718==    by 0x14D4AB: void std::vector<wchar_t, std::allocator<wchar_t> >::_M_range_initialize<wchar_t const*>(wchar_t const*, wchar_t const*, std::forward_iterator_tag) (stl_vector.h:1328)
+==24718==    by 0x14C3FD: void std::vector<wchar_t, std::allocator<wchar_t> >::_M_initialize_dispatch<wchar_t const*>(wchar_t const*, wchar_t const*, std::__false_type) (stl_vector.h:1299)
+==24718==    by 0x14B4BA: std::vector<wchar_t, std::allocator<wchar_t> >::vector<wchar_t const*, void>(wchar_t const*, wchar_t const*, std::allocator<wchar_t> const&) (stl_vector.h:414)
+==24718==    by 0x12563B: GetDefaultScatterPlotSeriesSettings() (pbPlots.cpp:551)
+==24718==    by 0x12588C: DrawScatterPlot(RGBABitmapImageReference*, double, double, std::vector<double, std::allocator<double> >*, std::vector<double, std::allocator<double> >*) (pbPlots.cpp:567)
+==24718==    by 0x120EF1: Convergence::plotConvergence(double, std::vector<double, std::allocator<double> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&) (convergence.cpp:54)
+==24718==    by 0x11E901: main (main.cpp:67)
+==24718== 
+==24718== 24 bytes in 1 blocks are still reachable in loss record 6 of 29
+==24718==    at 0x4C3217F: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==24718==    by 0x122A18: CreateRGBABitmapImageReference() (pbPlots.cpp:148)
+==24718==    by 0x120E16: Convergence::plotConvergence(double, std::vector<double, std::allocator<double> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&) (convergence.cpp:44)
+==24718==    by 0x11E901: main (main.cpp:67)
+==24718== 
+==24718== 24 bytes in 1 blocks are still reachable in loss record 7 of 29
+==24718==    at 0x4C3217F: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==24718==    by 0x125291: GetDefaultScatterPlotSettings() (pbPlots.cpp:529)
+==24718==    by 0x12580D: DrawScatterPlot(RGBABitmapImageReference*, double, double, std::vector<double, std::allocator<double> >*, std::vector<double, std::allocator<double> >*) (pbPlots.cpp:562)
+==24718==    by 0x120EF1: Convergence::plotConvergence(double, std::vector<double, std::allocator<double> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&) (convergence.cpp:54)
+==24718==    by 0x11E901: main (main.cpp:67)
+==24718== 
+==24718== 24 bytes in 1 blocks are still reachable in loss record 8 of 29
+==24718==    at 0x4C3217F: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==24718==    by 0x1252F5: GetDefaultScatterPlotSettings() (pbPlots.cpp:530)
+==24718==    by 0x12580D: DrawScatterPlot(RGBABitmapImageReference*, double, double, std::vector<double, std::allocator<double> >*, std::vector<double, std::allocator<double> >*) (pbPlots.cpp:562)
+==24718==    by 0x120EF1: Convergence::plotConvergence(double, std::vector<double, std::allocator<double> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&) (convergence.cpp:54)
+==24718==    by 0x11E901: main (main.cpp:67)
+==24718== 
+==24718== 24 bytes in 1 blocks are still reachable in loss record 9 of 29
+==24718==    at 0x4C3217F: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==24718==    by 0x125359: GetDefaultScatterPlotSettings() (pbPlots.cpp:531)
+==24718==    by 0x12580D: DrawScatterPlot(RGBABitmapImageReference*, double, double, std::vector<double, std::allocator<double> >*, std::vector<double, std::allocator<double> >*) (pbPlots.cpp:562)
+==24718==    by 0x120EF1: Convergence::plotConvergence(double, std::vector<double, std::allocator<double> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&) (convergence.cpp:54)
+==24718==    by 0x11E901: main (main.cpp:67)
+==24718== 
+==24718== 24 bytes in 1 blocks are still reachable in loss record 10 of 29
+==24718==    at 0x4C3217F: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==24718==    by 0x12584A: DrawScatterPlot(RGBABitmapImageReference*, double, double, std::vector<double, std::allocator<double> >*, std::vector<double, std::allocator<double> >*) (pbPlots.cpp:566)
+==24718==    by 0x120EF1: Convergence::plotConvergence(double, std::vector<double, std::allocator<double> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&) (convergence.cpp:54)
+==24718==    by 0x11E901: main (main.cpp:67)
+==24718== 
+==24718== 24 bytes in 1 blocks are still reachable in loss record 11 of 29
+==24718==    at 0x4C3217F: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==24718==    by 0x1255A1: GetDefaultScatterPlotSeriesSettings() (pbPlots.cpp:550)
+==24718==    by 0x12588C: DrawScatterPlot(RGBABitmapImageReference*, double, double, std::vector<double, std::allocator<double> >*, std::vector<double, std::allocator<double> >*) (pbPlots.cpp:567)
+==24718==    by 0x120EF1: Convergence::plotConvergence(double, std::vector<double, std::allocator<double> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&) (convergence.cpp:54)
+==24718==    by 0x11E901: main (main.cpp:67)
+==24718== 
+==24718== 24 bytes in 1 blocks are still reachable in loss record 12 of 29
+==24718==    at 0x4C3217F: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==24718==    by 0x14EF6D: __gnu_cxx::new_allocator<wchar_t>::allocate(unsigned long, void const*) (new_allocator.h:111)
+==24718==    by 0x14E906: std::allocator_traits<std::allocator<wchar_t> >::allocate(std::allocator<wchar_t>&, unsigned long) (alloc_traits.h:436)
+==24718==    by 0x14E109: std::_Vector_base<wchar_t, std::allocator<wchar_t> >::_M_allocate(unsigned long) (stl_vector.h:172)
+==24718==    by 0x14D4AB: void std::vector<wchar_t, std::allocator<wchar_t> >::_M_range_initialize<wchar_t const*>(wchar_t const*, wchar_t const*, std::forward_iterator_tag) (stl_vector.h:1328)
+==24718==    by 0x14C3FD: void std::vector<wchar_t, std::allocator<wchar_t> >::_M_initialize_dispatch<wchar_t const*>(wchar_t const*, wchar_t const*, std::__false_type) (stl_vector.h:1299)
+==24718==    by 0x14B4BA: std::vector<wchar_t, std::allocator<wchar_t> >::vector<wchar_t const*, void>(wchar_t const*, wchar_t const*, std::allocator<wchar_t> const&) (stl_vector.h:414)
+==24718==    by 0x1255D7: GetDefaultScatterPlotSeriesSettings() (pbPlots.cpp:550)
+==24718==    by 0x12588C: DrawScatterPlot(RGBABitmapImageReference*, double, double, std::vector<double, std::allocator<double> >*, std::vector<double, std::allocator<double> >*) (pbPlots.cpp:567)
+==24718==    by 0x120EF1: Convergence::plotConvergence(double, std::vector<double, std::allocator<double> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&) (convergence.cpp:54)
+==24718==    by 0x11E901: main (main.cpp:67)
+==24718== 
+==24718== 24 bytes in 1 blocks are still reachable in loss record 13 of 29
+==24718==    at 0x4C3217F: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==24718==    by 0x125605: GetDefaultScatterPlotSeriesSettings() (pbPlots.cpp:551)
+==24718==    by 0x12588C: DrawScatterPlot(RGBABitmapImageReference*, double, double, std::vector<double, std::allocator<double> >*, std::vector<double, std::allocator<double> >*) (pbPlots.cpp:567)
+==24718==    by 0x120EF1: Convergence::plotConvergence(double, std::vector<double, std::allocator<double> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&) (convergence.cpp:54)
+==24718==    by 0x11E901: main (main.cpp:67)
+==24718== 
+==24718== 24 bytes in 1 blocks are still reachable in loss record 14 of 29
+==24718==    at 0x4C3217F: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==24718==    by 0x12D958: CreateImage(double, double, RGBA*) (pbPlots.cpp:1662)
+==24718==    by 0x125A03: DrawScatterPlotFromSettings(RGBABitmapImageReference*, ScatterPlotSettings*) (pbPlots.cpp:595)
+==24718==    by 0x12594A: DrawScatterPlot(RGBABitmapImageReference*, double, double, std::vector<double, std::allocator<double> >*, std::vector<double, std::allocator<double> >*) (pbPlots.cpp:573)
+==24718==    by 0x120EF1: Convergence::plotConvergence(double, std::vector<double, std::allocator<double> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&) (convergence.cpp:54)
+==24718==    by 0x11E901: main (main.cpp:67)
+==24718== 
+==24718== 24 bytes in 1 blocks are definitely lost in loss record 15 of 29
+==24718==    at 0x4C3217F: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==24718==    by 0x1253BD: GetDefaultScatterPlotSettings() (pbPlots.cpp:532)
+==24718==    by 0x12580D: DrawScatterPlot(RGBABitmapImageReference*, double, double, std::vector<double, std::allocator<double> >*, std::vector<double, std::allocator<double> >*) (pbPlots.cpp:562)
+==24718==    by 0x120EF1: Convergence::plotConvergence(double, std::vector<double, std::allocator<double> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&) (convergence.cpp:54)
+==24718==    by 0x11E901: main (main.cpp:67)
+==24718== 
+==24718== 32 bytes in 1 blocks are still reachable in loss record 16 of 29
+==24718==    at 0x4C3217F: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==24718==    by 0x12D770: GetGray(double) (pbPlots.cpp:1632)
+==24718==    by 0x125400: GetDefaultScatterPlotSettings() (pbPlots.cpp:534)
+==24718==    by 0x12580D: DrawScatterPlot(RGBABitmapImageReference*, double, double, std::vector<double, std::allocator<double> >*, std::vector<double, std::allocator<double> >*) (pbPlots.cpp:562)
+==24718==    by 0x120EF1: Convergence::plotConvergence(double, std::vector<double, std::allocator<double> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&) (convergence.cpp:54)
+==24718==    by 0x11E901: main (main.cpp:67)
+==24718== 
+==24718== 32 bytes in 1 blocks are still reachable in loss record 17 of 29
+==24718==    at 0x4C3217F: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==24718==    by 0x12D601: GetBlack() (pbPlots.cpp:1605)
+==24718==    by 0x1256E7: GetDefaultScatterPlotSeriesSettings() (pbPlots.cpp:555)
+==24718==    by 0x12588C: DrawScatterPlot(RGBABitmapImageReference*, double, double, std::vector<double, std::allocator<double> >*, std::vector<double, std::allocator<double> >*) (pbPlots.cpp:567)
+==24718==    by 0x120EF1: Convergence::plotConvergence(double, std::vector<double, std::allocator<double> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&) (convergence.cpp:54)
+==24718==    by 0x11E901: main (main.cpp:67)
+==24718== 
+==24718== 32 bytes in 1 blocks are still reachable in loss record 18 of 29
+==24718==    at 0x4C3217F: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==24718==    by 0x12D677: GetWhite() (pbPlots.cpp:1614)
+==24718==    by 0x1259CB: DrawScatterPlotFromSettings(RGBABitmapImageReference*, ScatterPlotSettings*) (pbPlots.cpp:595)
+==24718==    by 0x12594A: DrawScatterPlot(RGBABitmapImageReference*, double, double, std::vector<double, std::allocator<double> >*, std::vector<double, std::allocator<double> >*) (pbPlots.cpp:573)
+==24718==    by 0x120EF1: Convergence::plotConvergence(double, std::vector<double, std::allocator<double> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&) (convergence.cpp:54)
+==24718==    by 0x11E901: main (main.cpp:67)
+==24718== 
+==24718== 56 bytes in 1 blocks are still reachable in loss record 19 of 29
+==24718==    at 0x4C3217F: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==24718==    by 0x125545: GetDefaultScatterPlotSeriesSettings() (pbPlots.cpp:547)
+==24718==    by 0x12588C: DrawScatterPlot(RGBABitmapImageReference*, double, double, std::vector<double, std::allocator<double> >*, std::vector<double, std::allocator<double> >*) (pbPlots.cpp:567)
+==24718==    by 0x120EF1: Convergence::plotConvergence(double, std::vector<double, std::allocator<double> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&) (convergence.cpp:54)
+==24718==    by 0x11E901: main (main.cpp:67)
+==24718== 
+==24718== 136 bytes in 1 blocks are still reachable in loss record 20 of 29
+==24718==    at 0x4C3217F: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==24718==    by 0x1251FC: GetDefaultScatterPlotSettings() (pbPlots.cpp:519)
+==24718==    by 0x12580D: DrawScatterPlot(RGBABitmapImageReference*, double, double, std::vector<double, std::allocator<double> >*, std::vector<double, std::allocator<double> >*) (pbPlots.cpp:562)
+==24718==    by 0x120EF1: Convergence::plotConvergence(double, std::vector<double, std::allocator<double> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&) (convergence.cpp:54)
+==24718==    by 0x11E901: main (main.cpp:67)
+==24718== 
+==24718== 296 bytes in 1 blocks are still reachable in loss record 21 of 29
+==24718==    at 0x4C3217F: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==24718==    by 0x1200E5: __gnu_cxx::new_allocator<double>::allocate(unsigned long, void const*) (new_allocator.h:111)
+==24718==    by 0x11FFF2: std::allocator_traits<std::allocator<double> >::allocate(std::allocator<double>&, unsigned long) (alloc_traits.h:436)
+==24718==    by 0x11FEC5: std::_Vector_base<double, std::allocator<double> >::_M_allocate(unsigned long) (stl_vector.h:172)
+==24718==    by 0x12171F: double* std::vector<double, std::allocator<double> >::_M_allocate_and_copy<__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double> > > >(unsigned long, __gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double> > >, __gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double> > >) (stl_vector.h:1260)
+==24718==    by 0x121300: std::vector<double, std::allocator<double> >::operator=(std::vector<double, std::allocator<double> > const&) (vector.tcc:206)
+==24718==    by 0x120E3F: Convergence::plotConvergence(double, std::vector<double, std::allocator<double> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&) (convergence.cpp:46)
+==24718==    by 0x11E901: main (main.cpp:67)
+==24718== 
+==24718== 512 bytes in 1 blocks are still reachable in loss record 22 of 29
+==24718==    at 0x4C3217F: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==24718==    by 0x1200E5: __gnu_cxx::new_allocator<double>::allocate(unsigned long, void const*) (new_allocator.h:111)
+==24718==    by 0x11FFF2: std::allocator_traits<std::allocator<double> >::allocate(std::allocator<double>&, unsigned long) (alloc_traits.h:436)
+==24718==    by 0x11FEC5: std::_Vector_base<double, std::allocator<double> >::_M_allocate(unsigned long) (stl_vector.h:172)
+==24718==    by 0x11FAB9: void std::vector<double, std::allocator<double> >::_M_realloc_insert<double>(__gnu_cxx::__normal_iterator<double*, std::vector<double, std::allocator<double> > >, double&&) (vector.tcc:406)
+==24718==    by 0x11F9AF: void std::vector<double, std::allocator<double> >::emplace_back<double>(double&&) (vector.tcc:105)
+==24718==    by 0x11F90B: std::vector<double, std::allocator<double> >::push_back(double&&) (stl_vector.h:954)
+==24718==    by 0x11F345: ForwardKinematics::calculateNewHeading(double) (forward_kinematics.cpp:86)
+==24718==    by 0x11E811: main (main.cpp:61)
+==24718== 
+==24718== 512 bytes in 1 blocks are still reachable in loss record 23 of 29
+==24718==    at 0x4C3217F: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==24718==    by 0x1200E5: __gnu_cxx::new_allocator<double>::allocate(unsigned long, void const*) (new_allocator.h:111)
+==24718==    by 0x11FFF2: std::allocator_traits<std::allocator<double> >::allocate(std::allocator<double>&, unsigned long) (alloc_traits.h:436)
+==24718==    by 0x11FEC5: std::_Vector_base<double, std::allocator<double> >::_M_allocate(unsigned long) (stl_vector.h:172)
+==24718==    by 0x11FAB9: void std::vector<double, std::allocator<double> >::_M_realloc_insert<double>(__gnu_cxx::__normal_iterator<double*, std::vector<double, std::allocator<double> > >, double&&) (vector.tcc:406)
+==24718==    by 0x11F9AF: void std::vector<double, std::allocator<double> >::emplace_back<double>(double&&) (vector.tcc:105)
+==24718==    by 0x11F90B: std::vector<double, std::allocator<double> >::push_back(double&&) (stl_vector.h:954)
+==24718==    by 0x11F467: ForwardKinematics::calculateNewSpeed(double) (forward_kinematics.cpp:98)
+==24718==    by 0x11E83E: main (main.cpp:62)
+==24718== 
+==24718== 512 bytes in 1 blocks are still reachable in loss record 24 of 29
+==24718==    at 0x4C3217F: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==24718==    by 0x1200E5: __gnu_cxx::new_allocator<double>::allocate(unsigned long, void const*) (new_allocator.h:111)
+==24718==    by 0x11FFF2: std::allocator_traits<std::allocator<double> >::allocate(std::allocator<double>&, unsigned long) (alloc_traits.h:436)
+==24718==    by 0x11FEC5: std::_Vector_base<double, std::allocator<double> >::_M_allocate(unsigned long) (stl_vector.h:172)
+==24718==    by 0x121941: void std::vector<double, std::allocator<double> >::_M_realloc_insert<double const&>(__gnu_cxx::__normal_iterator<double*, std::vector<double, std::allocator<double> > >, double const&) (vector.tcc:406)
+==24718==    by 0x121533: std::vector<double, std::allocator<double> >::push_back(double const&) (stl_vector.h:948)
+==24718==    by 0x120E93: Convergence::plotConvergence(double, std::vector<double, std::allocator<double> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&) (convergence.cpp:50)
+==24718==    by 0x11E901: main (main.cpp:67)
+==24718== 
+==24718== 3,624 bytes in 453 blocks are still reachable in loss record 25 of 29
+==24718==    at 0x4C3217F: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==24718==    by 0x12D9DD: CreateImage(double, double, RGBA*) (pbPlots.cpp:1664)
+==24718==    by 0x125A03: DrawScatterPlotFromSettings(RGBABitmapImageReference*, ScatterPlotSettings*) (pbPlots.cpp:595)
+==24718==    by 0x12594A: DrawScatterPlot(RGBABitmapImageReference*, double, double, std::vector<double, std::allocator<double> >*, std::vector<double, std::allocator<double> >*) (pbPlots.cpp:573)
+==24718==    by 0x120EF1: Convergence::plotConvergence(double, std::vector<double, std::allocator<double> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&) (convergence.cpp:54)
+==24718==    by 0x11E901: main (main.cpp:67)
+==24718== 
+==24718== 10,080 bytes in 1 blocks are still reachable in loss record 26 of 29
+==24718==    at 0x4C3217F: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==24718==    by 0x14EE41: __gnu_cxx::new_allocator<RGBABitmap*>::allocate(unsigned long, void const*) (new_allocator.h:111)
+==24718==    by 0x14E70A: std::allocator_traits<std::allocator<RGBABitmap*> >::allocate(std::allocator<RGBABitmap*>&, unsigned long) (alloc_traits.h:436)
+==24718==    by 0x14DEE5: std::_Vector_base<RGBABitmap*, std::allocator<RGBABitmap*> >::_M_allocate(unsigned long) (stl_vector.h:172)
+==24718==    by 0x14D17A: std::_Vector_base<RGBABitmap*, std::allocator<RGBABitmap*> >::_M_create_storage(unsigned long) (stl_vector.h:187)
+==24718==    by 0x14BEE4: std::_Vector_base<RGBABitmap*, std::allocator<RGBABitmap*> >::_Vector_base(unsigned long, std::allocator<RGBABitmap*> const&) (stl_vector.h:138)
+==24718==    by 0x14B205: std::vector<RGBABitmap*, std::allocator<RGBABitmap*> >::vector(unsigned long, std::allocator<RGBABitmap*> const&) (stl_vector.h:284)
+==24718==    by 0x12D9A7: CreateImage(double, double, RGBA*) (pbPlots.cpp:1662)
+==24718==    by 0x125A03: DrawScatterPlotFromSettings(RGBABitmapImageReference*, ScatterPlotSettings*) (pbPlots.cpp:595)
+==24718==    by 0x12594A: DrawScatterPlot(RGBABitmapImageReference*, double, double, std::vector<double, std::allocator<double> >*, std::vector<double, std::allocator<double> >*) (pbPlots.cpp:573)
+==24718==    by 0x120EF1: Convergence::plotConvergence(double, std::vector<double, std::allocator<double> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&) (convergence.cpp:54)
+==24718==    by 0x11E901: main (main.cpp:67)
+==24718== 
+==24718== 10,872 bytes in 453 blocks are still reachable in loss record 27 of 29
+==24718==    at 0x4C3217F: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==24718==    by 0x12DA54: CreateImage(double, double, RGBA*) (pbPlots.cpp:1665)
+==24718==    by 0x125A03: DrawScatterPlotFromSettings(RGBABitmapImageReference*, ScatterPlotSettings*) (pbPlots.cpp:595)
+==24718==    by 0x12594A: DrawScatterPlot(RGBABitmapImageReference*, double, double, std::vector<double, std::allocator<double> >*, std::vector<double, std::allocator<double> >*) (pbPlots.cpp:573)
+==24718==    by 0x120EF1: Convergence::plotConvergence(double, std::vector<double, std::allocator<double> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&) (convergence.cpp:54)
+==24718==    by 0x11E901: main (main.cpp:67)
+==24718== 
+==24718== 2,609,280 bytes in 453 blocks are still reachable in loss record 28 of 29
+==24718==    at 0x4C3217F: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==24718==    by 0x14EDC7: __gnu_cxx::new_allocator<RGBA*>::allocate(unsigned long, void const*) (new_allocator.h:111)
+==24718==    by 0x14E658: std::allocator_traits<std::allocator<RGBA*> >::allocate(std::allocator<RGBA*>&, unsigned long) (alloc_traits.h:436)
+==24718==    by 0x14DE35: std::_Vector_base<RGBA*, std::allocator<RGBA*> >::_M_allocate(unsigned long) (stl_vector.h:172)
+==24718==    by 0x14D068: std::_Vector_base<RGBA*, std::allocator<RGBA*> >::_M_create_storage(unsigned long) (stl_vector.h:187)
+==24718==    by 0x14BD4C: std::_Vector_base<RGBA*, std::allocator<RGBA*> >::_Vector_base(unsigned long, std::allocator<RGBA*> const&) (stl_vector.h:138)
+==24718==    by 0x14B133: std::vector<RGBA*, std::allocator<RGBA*> >::vector(unsigned long, std::allocator<RGBA*> const&) (stl_vector.h:284)
+==24718==    by 0x12DAA3: CreateImage(double, double, RGBA*) (pbPlots.cpp:1665)
+==24718==    by 0x125A03: DrawScatterPlotFromSettings(RGBABitmapImageReference*, ScatterPlotSettings*) (pbPlots.cpp:595)
+==24718==    by 0x12594A: DrawScatterPlot(RGBABitmapImageReference*, double, double, std::vector<double, std::allocator<double> >*, std::vector<double, std::allocator<double> >*) (pbPlots.cpp:573)
+==24718==    by 0x120EF1: Convergence::plotConvergence(double, std::vector<double, std::allocator<double> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&) (convergence.cpp:54)
+==24718==    by 0x11E901: main (main.cpp:67)
+==24718== 
+==24718== 10,420,320 bytes in 325,635 blocks are still reachable in loss record 29 of 29
+==24718==    at 0x4C3217F: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==24718==    by 0x12DB28: CreateImage(double, double, RGBA*) (pbPlots.cpp:1667)
+==24718==    by 0x125A03: DrawScatterPlotFromSettings(RGBABitmapImageReference*, ScatterPlotSettings*) (pbPlots.cpp:595)
+==24718==    by 0x12594A: DrawScatterPlot(RGBABitmapImageReference*, double, double, std::vector<double, std::allocator<double> >*, std::vector<double, std::allocator<double> >*) (pbPlots.cpp:573)
+==24718==    by 0x120EF1: Convergence::plotConvergence(double, std::vector<double, std::allocator<double> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&) (convergence.cpp:54)
+==24718==    by 0x11E901: main (main.cpp:67)
+==24718== 
+==24718== LEAK SUMMARY:
+==24718==    definitely lost: 24 bytes in 1 blocks
+==24718==    indirectly lost: 0 bytes in 0 blocks
+==24718==      possibly lost: 0 bytes in 0 blocks
+==24718==    still reachable: 13,056,564 bytes in 327,018 blocks

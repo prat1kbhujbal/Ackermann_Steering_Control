@@ -10,6 +10,9 @@ add_executable(
     ../app/inverse_kinematics.cpp
     ../app/robot.cpp
     ../app/sensor.cpp
+    ../app/convergence.cpp
+    ../app/pbPlots/pbPlots.cpp
+    ../app/pbPlots/supportLib.cpp
 )
 
 target_include_directories(cpp-test PUBLIC ../vendor/googletest/googletest/include 

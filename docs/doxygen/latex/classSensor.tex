@@ -1,0 +1,142 @@
+\hypertarget{classSensor}{}\section{Sensor Class Reference}
+\label{classSensor}\index{Sensor@{Sensor}}
+
+
+Class to hold current state of robot.  
+
+
+
+
+{\ttfamily \#include $<$sensor.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSensor_a342d6d11ef572c8cba92cb76fb1a294b}\label{classSensor_a342d6d11ef572c8cba92cb76fb1a294b}} 
+\hyperlink{classSensor_a342d6d11ef572c8cba92cb76fb1a294b}{Sensor} ()
+\begin{DoxyCompactList}\small\item\em Constructor for class \hyperlink{classSensor}{Sensor} to initialize robot current heading and speed to zero. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSensor_aee8c70e7ef05ce65e7ee33686b5d7db2}\label{classSensor_aee8c70e7ef05ce65e7ee33686b5d7db2}} 
+\hyperlink{classSensor_aee8c70e7ef05ce65e7ee33686b5d7db2}{$\sim$\+Sensor} ()
+\begin{DoxyCompactList}\small\item\em Destructor for class \hyperlink{classSensor}{Sensor}. \end{DoxyCompactList}\item 
+double \hyperlink{classSensor_a5bf3c3f5dfa3048bb702b5d3164bd410}{get\+Currernt\+Heading} ()
+\begin{DoxyCompactList}\small\item\em Get current heading of robot. (in radians) \end{DoxyCompactList}\item 
+double \hyperlink{classSensor_afea96ceec4830e07ed61f4ec12e45dec}{get\+Current\+Speed} ()
+\begin{DoxyCompactList}\small\item\em Get current speed of robot. (in meters/second) \end{DoxyCompactList}\item 
+void \hyperlink{classSensor_ade56b78666a057ce576aad448a2a5ecd}{set\+Currernt\+Heading} (double)
+\begin{DoxyCompactList}\small\item\em Set current heading of robot. (in radians) \end{DoxyCompactList}\item 
+void \hyperlink{classSensor_ac5cbcf17f5dc8a4d8ca545d657255f54}{set\+Currernt\+Speed} (double)
+\begin{DoxyCompactList}\small\item\em Set current speed of robot. (in meters/second) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class to hold current state of robot. 
+
+Definition at line 40 of file sensor.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classSensor_afea96ceec4830e07ed61f4ec12e45dec}\label{classSensor_afea96ceec4830e07ed61f4ec12e45dec}} 
+\index{Sensor@{Sensor}!get\+Current\+Speed@{get\+Current\+Speed}}
+\index{get\+Current\+Speed@{get\+Current\+Speed}!Sensor@{Sensor}}
+\subsubsection{\texorpdfstring{get\+Current\+Speed()}{getCurrentSpeed()}}
+{\footnotesize\ttfamily double Sensor\+::get\+Current\+Speed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get current speed of robot. (in meters/second) 
+
+\begin{DoxyReturn}{Returns}
+double -\/ \hyperlink{classRobot}{Robot}\textquotesingle{}s current speed 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=333pt]{classSensor_afea96ceec4830e07ed61f4ec12e45dec_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classSensor_a5bf3c3f5dfa3048bb702b5d3164bd410}\label{classSensor_a5bf3c3f5dfa3048bb702b5d3164bd410}} 
+\index{Sensor@{Sensor}!get\+Currernt\+Heading@{get\+Currernt\+Heading}}
+\index{get\+Currernt\+Heading@{get\+Currernt\+Heading}!Sensor@{Sensor}}
+\subsubsection{\texorpdfstring{get\+Currernt\+Heading()}{getCurrerntHeading()}}
+{\footnotesize\ttfamily double Sensor\+::get\+Currernt\+Heading (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get current heading of robot. (in radians) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double -\/ \hyperlink{classRobot}{Robot}\textquotesingle{}s current heading 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=344pt]{classSensor_a5bf3c3f5dfa3048bb702b5d3164bd410_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classSensor_ade56b78666a057ce576aad448a2a5ecd}\label{classSensor_ade56b78666a057ce576aad448a2a5ecd}} 
+\index{Sensor@{Sensor}!set\+Currernt\+Heading@{set\+Currernt\+Heading}}
+\index{set\+Currernt\+Heading@{set\+Currernt\+Heading}!Sensor@{Sensor}}
+\subsubsection{\texorpdfstring{set\+Currernt\+Heading()}{setCurrerntHeading()}}
+{\footnotesize\ttfamily void Sensor\+::set\+Currernt\+Heading (\begin{DoxyParamCaption}\item[{double}]{ }\end{DoxyParamCaption})}
+
+
+
+Set current heading of robot. (in radians) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em double} & -\/ Current heading of robot. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=344pt]{classSensor_ade56b78666a057ce576aad448a2a5ecd_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classSensor_ac5cbcf17f5dc8a4d8ca545d657255f54}\label{classSensor_ac5cbcf17f5dc8a4d8ca545d657255f54}} 
+\index{Sensor@{Sensor}!set\+Currernt\+Speed@{set\+Currernt\+Speed}}
+\index{set\+Currernt\+Speed@{set\+Currernt\+Speed}!Sensor@{Sensor}}
+\subsubsection{\texorpdfstring{set\+Currernt\+Speed()}{setCurrerntSpeed()}}
+{\footnotesize\ttfamily void Sensor\+::set\+Currernt\+Speed (\begin{DoxyParamCaption}\item[{double}]{ }\end{DoxyParamCaption})}
+
+
+
+Set current speed of robot. (in meters/second) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em double} & -\/ Current speed of robot. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{classSensor_ac5cbcf17f5dc8a4d8ca545d657255f54_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/maitreya/valgrind\+\_\+ws/\+Ackermann\+\_\+\+Steering\+\_\+\+Control/include/sensor.\+hpp\end{DoxyCompactItemize}
