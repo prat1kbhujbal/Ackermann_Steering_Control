@@ -89,7 +89,7 @@ The general idea is to split the development of the software into sequences of r
 The purpose of sprint planning is to define what can be delivered in the sprint and how that work will be achieved.
 ### [Sprint planning docs link](https://docs.google.com/document/d/19WqTGq6393yfdi9zWVSW7mBga2KUV8RA2Y6YoS7wM1U/edit?usp=sharing)
 
-### [Phase_2 Video Submission](https://drive.google.com/file/d/12jXQU_aEKI4CIOKC4BrwYpx9jED0UkKq/view?usp=sharing)
+### [Phase_2 Video Submission](https://drive.google.com/file/d/1Wclkfek_9FRUs6Xb_FPI_nm2hIjZ6RBl/view?usp=sharing)
 
 ### [Final Report file](reports/Ackermann_Steering_Control_Final_Report.pdf)
 
