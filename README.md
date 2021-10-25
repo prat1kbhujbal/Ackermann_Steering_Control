@@ -75,3 +75,21 @@ Outout on graphs for same inputs showing convergence for speed and heading:
 </p> 
 
 -------------------------------
+## UML Diagrams:
+- ### [Activity Diagram](UML/revised/ActivityDiagram_v2.pdf)
+- ### [Class Diagram](UML/revised/ClassDiagram_v2.pdf)
+## [Quad Chart](Quadchart.pdf)
+-----------------------------------
+## Agile Iterative Process (AIP) 
+The general idea is to split the development of the software into sequences of repeated cycles (iterations).
+### [Agile Iterative Process Link](https://docs.google.com/spreadsheets/d/1n_kbtt7QxT_ALCAvM8brNtceum1OX8zb4m0UsBqBF-c/edit#gid=0)
+
+-------------------------------
+## Sprint planning notes and review
+The purpose of sprint planning is to define what can be delivered in the sprint and how that work will be achieved.
+### [Sprint planning docs link](https://docs.google.com/document/d/19WqTGq6393yfdi9zWVSW7mBga2KUV8RA2Y6YoS7wM1U/edit?usp=sharing)
+--------------------------------
+### [Phase_2 Video Submission](https://drive.google.com/file/d/12jXQU_aEKI4CIOKC4BrwYpx9jED0UkKq/view?usp=sharing)
+-------------------------------
+### [Final Report file](/reports/Ackermann_Steering_Control_Phase_2.pdf)
+--------------------------------
