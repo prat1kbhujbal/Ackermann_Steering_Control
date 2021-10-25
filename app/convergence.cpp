@@ -44,7 +44,6 @@ int Convergence::plotConvergence(double goal, std::vector<double>
   RGBABitmapImageReference *canvasReference = CreateRGBABitmapImageReference();
   std::vector<double> y;
   y = current;
-  // y.pop_back();
   std::vector<double> time;
   double j = 0;
   for (unsigned int i = 0; i < y.size(); i++) {

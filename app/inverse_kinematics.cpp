@@ -89,7 +89,7 @@ void InverseKinematics::calculateWheelSpeeds(double new_speed) {
   robot2.setLeftWheelVel(new_speed / robot2.getWheelRadius());
   robot2.setRightWheelVel(new_speed / robot2.getWheelRadius());
 
-  std::cout << "Robot Speed= " << new_speed <<std::endl;
+  std::cout << "Current Robot Speed= " << new_speed <<std::endl;
   std::cout << "Left Wheel Speed= " << robot2.getLeftWheelVel()
   << std::endl;
   std::cout << "Right Wheel Speed= " << robot2.getRightWheelVel()

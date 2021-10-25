@@ -77,8 +77,5 @@ double PID::compute(double current_value, double desired_value) {
     output = _min;
   else if (output >= _max)
     output = _max;
-
-  std::cout << "output = " << current_value +output << std::endl;
-  std::cout << "PID Error = " << error << std::endl;
   return current_value + output;
 }
