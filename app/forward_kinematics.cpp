@@ -85,7 +85,8 @@ double ForwardKinematics::calculateNewHeading(double goal_heading) {
   sensor1.setCurrerntHeading(sensor1.getCurrerntHeading() + _d_theta);
   heading_vector.push_back(sensor1.getCurrerntHeading());
 
-  std::cout << "Current Robot heading= " << sensor1.getCurrerntHeading() << std::endl;
+  std::cout << "Current Robot heading= " << sensor1.getCurrerntHeading()
+  << std::endl;
   return _new_heading;
 }
 

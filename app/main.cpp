@@ -46,7 +46,8 @@ int main() {
   double goal_heading, goal_speed;
 
   std::cout << "Ackermann controller" << std::endl;
-  std::cout << "Enter goal heading (0-3.14 radian counter-clockwise): "<< std::endl;
+  std::cout << "Enter goal heading (0-3.14 radian counter-clockwise): "
+  << std::endl;
   std::cin >> goal_heading;
   std::cout << "Enter goal speed (<20 m/s): " << std::endl;
   std::cin >> goal_speed;
