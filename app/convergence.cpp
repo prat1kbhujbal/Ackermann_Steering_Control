@@ -54,7 +54,6 @@ int Convergence::plotConvergence(double goal, std::vector<double>
   DrawScatterPlot(canvasReference, 1260, 720, &time, &y);
   double x1 = MapXCoordinateAutoSettings(0, canvasReference->image, &time);
   double y1 = MapYCoordinateAutoSettings(goal, canvasReference->image, &y);
-  
   double x2 = MapXCoordinateAutoSettings(time.back(), canvasReference->image,
   &time);
   double y2 = MapYCoordinateAutoSettings(goal, canvasReference->image, &y);
