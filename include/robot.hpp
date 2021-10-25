@@ -17,15 +17,19 @@ class Robot {
  public:
   /**
    * @brief Constructor for class Robot
-   * @param wheel_base double - Robot's wheel base
-   * @param track_width double - Robot's track width
-   * @param wheel_radius double - Robot's wheel radius
-   * @param left_wheel_vel double - Robot's left drive wheel speed
-   * @param right_wheel_vel double - Robot's right drive wheel speed
-   * @param left_wheel_ang double - Robot's left steering wheel angle
-   * @param right_wheel_ang double - Robot's right steering wheel angle
+   * @param wheel_base double - Robot's wheel base (in meters)
+   * @param track_width double - Robot's track width (in meters)
+   * @param wheel_radius double - Robot's wheel radius (in meters)
+   * @param left_wheel_vel double - Robot's left drive wheel speed (in 
+   *        rotations/second)
+   * @param right_wheel_vel double - Robot's right drive wheel speed (in 
+   *        rotations/second)
+   * @param left_wheel_ang double - Robot's left steering wheel angle (in 
+   *        radians/second)
+   * @param right_wheel_ang double - Robot's right steering wheel angle (in 
+   *        radians/second)
    * @param com_offset double - Offset of robot's centre of mass from centre 
-   *        of rear axle
+   *        of rear axle (in meters)
    * @param max_steer_angle double - Robot's max steering angle
    */
   Robot(double wheel_base, double track_width, double wheel_radius,
@@ -48,49 +52,49 @@ class Robot {
   ~Robot() {}
 
   /**
-   * @brief Get wheelbase of robot.
+   * @brief Get wheelbase of robot. (in meters)
    * @param void
    * @return double - Robot's wheel base
    */
   double getWheelBase();
 
   /**
-   * @brief Get track width of robot.
+   * @brief Get track width of robot. (in meters)
    * @param void
    * @return double - Robot's track width
    */
   double getTrackWidth();
 
   /**
-   * @brief Get wheel radius of robot.
+   * @brief Get wheel radius of robot. (in meters)
    * @param void
    * @return double - Robot's wheel radius
    */
   double getWheelRadius();
 
   /**
-   * @brief Get left drive wheel speed of robot.
+   * @brief Get left drive wheel speed of robot. (in rotations/second)
    * @param void
    * @return double - Robot's left drive wheel speed
    */
   double getLeftWheelVel();
 
   /**
-   * @brief Get right drive wheel speed of robot.
+   * @brief Get right drive wheel speed of robot. (in rotations/second)
    * @param void
    * @return double - Robot's right drive wheel speed
    */
   double getRightWheelVel();
 
   /**
-   * @brief Get left steering wheel angle of robot.
+   * @brief Get left steering wheel angle of robot. (in radians)
    * @param void
    * @return double - Robot's left steering wheel angle
    */
-  double getLeftWheelAng();
+  double getLeftWheelAng(); 
 
   /**
-   * @brief Get right steering wheel angle of robot.
+   * @brief Get right steering wheel angle of robot. (in radians)
    * @param void
    * @return double - Robot's right steering wheel angle
    */
@@ -98,7 +102,7 @@ class Robot {
 
   /**
    * @brief Get Offset of robot's centre of mass from centre 
-   *        of rear axle.
+   *        of rear axle. (in meters)
    * @param void
    * @return double - Offset of robot's centre of mass from centre 
    *        of rear axle
@@ -106,7 +110,7 @@ class Robot {
   double getComOffset();
 
   /**
-   * @brief Get maximum steering angle of robot.
+   * @brief Get maximum steering angle of robot. (in radians)
    * @param void
    * @return double - Robot's max steering angle
    */
@@ -127,14 +131,14 @@ class Robot {
   void setRightWheelVel(double);
 
   /**
-   * @brief Set left drive wheel angle of robot.
+   * @brief Set left drive wheel angle of robot. (in rotations/second)
    * @param double - left drive wheel angle
    * @return void
    */
   void setLeftWheelAng(double);
 
   /**
-   * @brief Set right drive wheel angle of robot.
+   * @brief Set right drive wheel angle of robot. (in rotations/second)
    * @param double - right drive wheel angle
    * @return void
    */

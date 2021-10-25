@@ -28,16 +28,16 @@ class InverseKinematics {
 
   /**
    * @brief Calculate the left and right wheel angles based on heading output 
-   *        of fk.
-   * @param double - heading output from fk
+   *        of fk. (in radians)
+   * @param double - heading output from fk (in radians)
    * @return void
    */
   void calculateWheelAngles(double);
 
   /**
    * @brief Calculate the left and right wheel speeds based on heading output 
-   *        of fk.
-   * @param double - speed output from fk
+   *        of fk. (in ratations/second)
+   * @param double - speed output from fk (in meters/second)
    * @return void
    */
   void calculateWheelSpeeds(double);

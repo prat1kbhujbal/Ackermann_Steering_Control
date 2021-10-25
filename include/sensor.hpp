@@ -29,27 +29,27 @@ class Sensor {
     ~Sensor() {}
 
     /**
-     * @brief Get current heading of robot.
+     * @brief Get current heading of robot. (in radians)
      * @param void
      * @return double - Robot's current heading
      */
     double getCurrerntHeading();
 
     /**
-     * @brief Get current speed of robot.
+     * @brief Get current speed of robot. (in meters/second)
      * @return double - Robot's current speed
      */
     double getCurrentSpeed();
 
     /**
-     * @brief Set current heading of robot.
+     * @brief Set current heading of robot. (in radians)
      * @param double - Current heading of robot.
      * @return void
      */
     void setCurrerntHeading(double);
 
     /**
-     * @brief Set current speed of robot.
+     * @brief Set current speed of robot. (in meters/second)
      * @param double - Current speed of robot.
      * @return void
      */

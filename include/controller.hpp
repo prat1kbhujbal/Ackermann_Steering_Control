@@ -29,21 +29,22 @@ class Controller {
   ~Controller() {}
 
   /**
-   * @brief Get goal heading value
+   * @brief Get goal heading value. (0 to 3.14 radians)
    * @param void
-   * @return double - Robot's goal heading
+   * @return double - Robot's goal heading (in radians)
    */
   double getGoalHeading();
 
   /**
-   * @brief Get goal speed value.
-   * @return double - Robot's goal speed
+   * @brief Get goal speed value. (in meters/seconds)
+   * @return double - Robot's goal speed (in meters/seconds)
    */
   double getGoalSpeed();
 
   /**
    * @brief Get set goal heading and speed values.
-   * @param void
+   * @param goal_heading (0 to 3.14 radians)
+   * @param goal_speed (in meters/seconds)
    * @return void
    */
   void setGoal(double goal_heading,  double goal_speed);
@@ -51,6 +52,8 @@ class Controller {
  private:
   /**
    * Class local variables.
+   * _goal_heading (0 to 3.14 radians)
+   * _goal_speed (in meters/seconds)
    */
   double _goal_heading, _goal_speed;
 };
