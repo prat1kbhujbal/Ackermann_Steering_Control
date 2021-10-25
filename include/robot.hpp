@@ -115,7 +115,7 @@ class Robot {
    * @param void
    * @return double - Robot's left steering wheel angle
    */
-  double getLeftWheelAng(); 
+  double getLeftWheelAng();
 
   /**
    * @brief Get right steering wheel angle of robot. (in radians)
