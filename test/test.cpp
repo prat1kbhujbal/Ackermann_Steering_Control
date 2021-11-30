@@ -148,36 +148,3 @@ TEST(InverseKinematicsTest2, inverseKinematicsMembersTest) {
     EXPECT_NEAR(robot4.getLeftWheelVel(), 0.01, 1);
     EXPECT_NEAR(robot4.getRightWheelVel(), 0.01, 1);
 }
-
-TEST(forwardKinematicsTest, forwardKinematicsMemeberTest) {
-    ForwardKinematics fk;
-    PID pid_steer(1, 1, 1, 0.1, -0.785, 0.785);
-    PID pid_speed(1, 1, 1, 0.1, 0, 1);
-    Sensor sensor1;
-    sensor1.setCurrerntHeading(0.1);
-    sensor1.setCurrerntSpeed(10);
-    Robot robot1(4, 2, 0.3, 0.1, 0.1, 0, 0, 1, 0.785);
-    fk.setDTheta(0.1);
-    EXPECT_EQ(0, fk.getR1());
-    EXPECT_NEAR(fk.calculateNewHeading(0.1), 0.62, 0.1);
-    EXPECT_NEAR(fk.calculateNewSpeed(5), 5, 0.1);
-    EXPECT_TRUE(fk.goalReached(0.1, 10));
-}
-
-TEST(forwardKinematicsTest1, forwardKinematicsMemeberTest) {
-    ForwardKinematics fk1;
-    PID pid_steer1(1, 1, 1, 0.1, -0.785, 0.785);
-    PID pid_speed1(1, 1, 1, 0.1, 0, 1);
-    Sensor sensor2;
-    Convergence c1;
-    sensor2.setCurrerntHeading(0.1);
-    sensor2.setCurrerntSpeed(10);
-    Robot robot2(4, 2, 0.3, 0.1, 0.1, 0, 0, 1, 0.785);
-    fk1.setDTheta(0.1);
-    std::vector<double> my_vector{1, 2, 3};
-    std::string my_string = "speed.png";
-    EXPECT_EQ(0, fk1.getR1());
-    EXPECT_NEAR(fk1.calculateNewHeading(-0.1), -0.785, 0.1);
-    EXPECT_NEAR(fk1.calculateNewSpeed(5), 5, 0.1);
-    EXPECT_EQ(1, c1.plotConvergence(0.1, my_vector, my_string));
-}
