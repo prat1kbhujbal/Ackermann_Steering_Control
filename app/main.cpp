@@ -41,13 +41,14 @@
 #include <inverse_kinematics.hpp>
 #include<sensor.hpp>
 #include<convergence.hpp>
+#include<fk_goal.hpp>
 
 int main() {
   double goal_heading, goal_speed;
 
   std::cout << "Ackermann controller" << std::endl;
   std::cout << "Enter goal heading (0-3.14 radian counter-clockwise): "
-  << std::endl;
+            << std::endl;
   std::cin >> goal_heading;
   std::cout << "Enter goal speed (<20 m/s): " << std::endl;
   std::cin >> goal_speed;
@@ -56,7 +57,8 @@ int main() {
   cont1.setGoal(goal_heading, goal_speed);
   ForwardKinematics fk;
   InverseKinematics ik;
-  while (fk.goalReached(cont1.getGoalHeading(), cont1.getGoalSpeed())) {
+  FkGoal goal;
+  while (goal.goalReached(cont1.getGoalHeading(), cont1.getGoalSpeed())) {
     std::cout << "---------------" << std::endl;
     ik.calculateWheelAngles(fk.calculateNewHeading(cont1.getGoalHeading()));
     ik.calculateWheelSpeeds(fk.calculateNewSpeed(cont1.getGoalSpeed()));

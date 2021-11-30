@@ -21,14 +21,12 @@
  * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER 
  * DEALINGS IN THE SOFTWARE. 
  * 
- * @file controller.cpp
- * @author Maaruf Vazifdar
- * @author Maitreya Kulkarni
+ * @file forward_kinematics.cpp
  * @author Pratik Bhujnbal
  * @brief Implementation file for ackermann controller goal attributes
  *        and its members.
  * @version 1.1
- * @date 10/15/2021
+ * @date 11/29/2021
  * @copyright  Copyright (c) 2021
  * 
  */
@@ -52,32 +50,38 @@ double ForwardKinematics::getR1() {
 }
 
 void ForwardKinematics::setDTheta(double d_theta) {
-    _d_theta = d_theta;
+  _d_theta = d_theta;
 }
 
 double ForwardKinematics::calculateNewHeading(double goal_heading) {
   if (goal_heading > 1.57)
-    goal_heading = 3.14 -goal_heading;
+    goal_heading = 3.14 - goal_heading;
 
   _new_heading = pid_steer.compute(sensor1.getCurrerntHeading(), goal_heading);
 
   if (_new_heading > 0.01) {         // Left Turn
-    _R = sqrt(pow(robot1.getComOffset(), 2) + (pow(robot1.getWheelBase(), 2)
-        * (1 / pow(tan(_new_heading), 2))));
+    _R =
+        sqrt(
+            pow(robot1.getComOffset(), 2)
+                + (pow(robot1.getWheelBase(), 2)
+                    * (1 / pow(tan(_new_heading), 2))));
 
-  _R1 = sqrt(pow(_R, 2) - pow(robot1.getComOffset(), 2));
+    _R1 = sqrt(pow(_R, 2) - pow(robot1.getComOffset(), 2));
 
-  _d_theta = (robot1.getWheelRadius() * robot1.getLeftWheelVel()
-      * 1) / (_R1 + (robot1.getTrackWidth() / 2));
-      setDTheta(_d_theta);
+    _d_theta = (robot1.getWheelRadius() * robot1.getLeftWheelVel() * 1)
+        / (_R1 + (robot1.getTrackWidth() / 2));
+  setDTheta(_d_theta);
   } else if (_new_heading < 0.01) {   // Right Turn
-    _R = sqrt(pow(robot1.getComOffset(), 2) + (pow(robot1.getWheelBase(), 2)
-        * (1 / pow(tan(-_new_heading), 2))));
+    _R =
+        sqrt(
+            pow(robot1.getComOffset(), 2)
+                + (pow(robot1.getWheelBase(), 2)
+                    * (1 / pow(tan(-_new_heading), 2))));
 
-  _R1 = sqrt(pow(_R, 2) - pow(robot1.getComOffset(), 2));
+    _R1 = sqrt(pow(_R, 2) - pow(robot1.getComOffset(), 2));
 
-  _d_theta = -(robot1.getWheelRadius() * robot1.getLeftWheelVel()
-             * 1) / (_R1 + (robot1.getTrackWidth() / 2));
+    _d_theta = -(robot1.getWheelRadius() * robot1.getLeftWheelVel() * 1)
+        / (_R1 + (robot1.getTrackWidth() / 2));
   } else {
     _new_heading = 0;
   }
@@ -86,7 +90,7 @@ double ForwardKinematics::calculateNewHeading(double goal_heading) {
   heading_vector.push_back(sensor1.getCurrerntHeading());
 
   std::cout << "Current Robot heading= " << sensor1.getCurrerntHeading()
-  << std::endl;
+      << std::endl;
   return _new_heading;
 }
 
@@ -99,11 +103,11 @@ double ForwardKinematics::calculateNewSpeed(double goal_speed) {
   return _new_speed;
 }
 
-bool ForwardKinematics::goalReached(double goal_heading, double goal_speed) {
-  if (sensor1.getCurrerntHeading() <= goal_heading &&
-      sensor1.getCurrerntHeading() <= (goal_heading + 0.05)
-      && sensor1.getCurrentSpeed() <= goal_speed &&
-      sensor1.getCurrentSpeed() <= (goal_speed + 0.05))
+bool ForwardKinematics::goalStatus(FkGoal fkgoal) {
+  if (fkgoal.status == true) {
+    std::cout << "Goal Received" << std::endl;
     return true;
-  return false;
+  } else {
+    return false;
+  }
 }
