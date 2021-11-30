@@ -1,7 +1,7 @@
 /**
  * MIT License
  *
- * Copyright (c) 2021 Maaruf Vazifdar, Maitreya Kulkarni, Pratik Bhujnbal
+ * Copyright (c) 2021 Pratik Bhujnbal
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to 
@@ -21,10 +21,10 @@
  * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER 
  * DEALINGS IN THE SOFTWARE. 
  * 
- * @file controller.cpp
+ * @file forward_kinematics.cpp
  * @author Maaruf Vazifdar
  * @author Maitreya Kulkarni
- * @author Pratik Bhujnbal
+ * @author Pratik Bhujbal
  * @brief Implementation file for ackermann controller goal attributes
  *        and its members.
  * @version 1.1
@@ -33,6 +33,8 @@
  * 
  */
 #include<vector>
+#include<fk_goal.hpp>
+
 #pragma once
 /**
  * @brief Class to apply forward kinematics.
@@ -89,12 +91,10 @@ class ForwardKinematics {
   double calculateNewSpeed(double goal_speed);
 
   /**
-   * @brief Boolean value for goal reached (True/False)
-   * @param goal_heading double - robot's goal heading
-   * @param goal_speed double - robot's goal speed
+   * @brief Boolean value for goal Status (True/False)
    * @return bool
    */ 
-  bool goalReached(double goal_heading, double goal_speed);
+  bool goalStatus(FkGoal fkgoal);
 
  private:
   /**
