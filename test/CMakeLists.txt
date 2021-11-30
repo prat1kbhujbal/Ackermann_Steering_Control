@@ -4,6 +4,7 @@ add_executable(
     cpp-test
     test.cpp
     main.cpp
+    mockFk.cpp
     ../app/pid.cpp
     ../app/controller.cpp
     ../app/forward_kinematics.cpp
@@ -16,5 +17,5 @@ add_executable(
 )
 
 target_include_directories(cpp-test PUBLIC ../vendor/googletest/googletest/include 
-${CMAKE_SOURCE_DIR}/include)
-target_link_libraries(cpp-test PUBLIC gtest)
+${CMAKE_SOURCE_DIR}/include ../vendor/googletest/googlemock/include)
+target_link_libraries(cpp-test PUBLIC gtest gmock)
