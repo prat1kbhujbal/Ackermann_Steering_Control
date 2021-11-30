@@ -93,6 +93,11 @@ The purpose of sprint planning is to define what can be delivered in the sprint 
 
 ### [Final Report file](reports/Ackermann_Steering_Control_Final_Report.pdf)
 
+## GMock
+GMock is used for creating fake objects in order to remove external dependencies for effective testing. Mock objects help remove unnecessary dependencies in tests and make them fast and reliable.   
+A mock object implements the same interface as a real object (so it can be used as one), but lets you specify at run time how it will be used and what it should do.  
+In this project mock was created for FkGoal class for goal status and use for testing goal reached or not in ForwardKinematics.
+
 ## Build And Execute
 After Execution graphs will be saved under build folder.
 ```bash
@@ -129,7 +134,3 @@ make code_coverage
 ## Authors
 - Pratik Bhujbal  UID: 117555295   
   Github URL: https://github.com/prat33k-dev
-- Maitreya Kulkarni UID: 117506075  
-  Github URL: https://github.com/maitreya98
-- Maaruf Vazifdar UID: 117509717  
-  Github URL: https://github.com/maarufvazifdar
